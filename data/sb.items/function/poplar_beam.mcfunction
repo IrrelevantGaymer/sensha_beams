@@ -1,0 +1,1 @@
+loot give @s loot sb.items:poplar_beam

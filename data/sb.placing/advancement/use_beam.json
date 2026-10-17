@@ -1,0 +1,11 @@
+{
+    "criteria": {"use_item": {
+        "trigger": "using_item",
+        "conditions": { "item": { "predicates": {
+            "minecraft:custom_data": {"is_sensha_beam": true}
+        }}}
+    }},
+    "rewards": {
+        "function": "sb.placing:use_beam"
+    }
+}

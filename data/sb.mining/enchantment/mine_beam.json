@@ -1,0 +1,26 @@
+{
+    "anvil_cost": 0,
+    "description": "",
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_level": 1,
+    "weight": 1,
+    "slots": ["mainhand", "hand"],
+    "supported_items": [],
+    "effects": {
+        "minecraft:post_piercing_attack": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "sb.mining:start_mining_beam_wrapper"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,1 @@
+return run function sb.placing:operations/does_length_to_place_exceed_max_segment_length with entity @s data

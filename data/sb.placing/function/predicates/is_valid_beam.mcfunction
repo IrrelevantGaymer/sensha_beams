@@ -1,0 +1,1 @@
+return run function sb.placing:operations/is_valid_beam with entity @s data

@@ -1,0 +1,30 @@
+{
+    "values": [
+        "#minecraft:air",
+        "#minecraft:buttons",
+        "#minecraft:can_glide_through",
+        "#minecraft:crops",
+        "#minecraft:fire",
+        "#minecraft:portals",
+        "#minecraft:pressure_plates",
+        "#minecraft:rails",
+        "#minecraft:replaceable",
+        "#minecraft:saplings",
+        "#minecraft:signs",
+        "#minecraft:small_flowers",
+        "#minecraft:wool_carpets",
+
+        "minecraft:ladder",
+
+        "minecraft:sunflower",
+        "minecraft:lilac",
+        "minecraft:peony",
+        "minecraft:rose_bush",
+        "minecraft:pitcher_plant",
+        "minecraft:mangrove_propagule",
+        "minecraft:pink_petals",
+        "minecraft:wildflowers",
+        "minecraft:spore_blossom",
+        "minecraft:cactus_flower"
+    ]
+}

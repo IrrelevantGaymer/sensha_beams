@@ -1,0 +1,8 @@
+{
+    "criteria": {"tick": {
+        "trigger": "minecraft:tick"
+    }},
+    "rewards": {
+        "function": "sb.placing:beam_cooldown"
+    }
+}

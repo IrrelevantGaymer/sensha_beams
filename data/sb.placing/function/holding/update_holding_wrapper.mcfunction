@@ -1,0 +1,1 @@
+function sb.placing:holding/update_holding with entity @s

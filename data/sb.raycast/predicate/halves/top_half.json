@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:any_of",
+    "terms": [
+        {
+            "type": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:slabs",
+                    "state": {
+                        "type": "top"
+                    }
+                }
+            }
+        },
+
+        {
+            "type": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "#sb.raycast:halves/top_half"
+                }
+            }
+        }
+    ]
+}

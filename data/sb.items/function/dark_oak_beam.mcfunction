@@ -1,0 +1,1 @@
+loot give @s loot sb.items:dark_oak_beam

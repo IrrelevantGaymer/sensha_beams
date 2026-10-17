@@ -1,0 +1,1 @@
+return run function sb.mining:operations/is_closer_intersection with entity @s data

@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:set_count",
+    "count": {
+        "type": "minecraft:negate", 
+        "input": {
+            "type": "minecraft:score",
+            "target": "this",
+            "score": "sb.used_beam_count",
+            "fallback": 0
+        }
+    },
+    "add": true
+}

@@ -1,0 +1,1 @@
+$rotate @s facing $(end_pos_x) $(end_pos_y) $(end_pos_z)

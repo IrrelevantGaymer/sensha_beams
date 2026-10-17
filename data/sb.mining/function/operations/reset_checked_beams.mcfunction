@@ -1,0 +1,1 @@
+data modify entity @s data.checked_beams set value []
