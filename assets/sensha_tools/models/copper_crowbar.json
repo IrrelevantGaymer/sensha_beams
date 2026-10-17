@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "sensha_tools:item/copper_crowbar"
+    }
+}

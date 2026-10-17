@@ -1,0 +1,9 @@
+{
+    "model": {
+        "type": "minecraft:model",
+        "model": "sensha_beams:cherry/8",
+        "tints": [
+            {"type": "custom_model_data", "default": -1}
+        ]
+    }
+}

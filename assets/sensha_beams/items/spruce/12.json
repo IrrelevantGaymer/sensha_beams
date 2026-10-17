@@ -1,0 +1,9 @@
+{
+    "model": {
+        "type": "minecraft:model",
+        "model": "sensha_beams:spruce/12",
+        "tints": [
+            {"type": "custom_model_data", "default": -1}
+        ]
+    }
+}
