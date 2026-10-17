@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "adds beams whose two ends can be placed on a 16x16x16 subvoxel grid used for building and decorating",
+    "description": "adds beams whose two ends can be placed on a 8x8x8 subvoxel grid used for building and decorating",
     "min_format": [
       121,
       1
