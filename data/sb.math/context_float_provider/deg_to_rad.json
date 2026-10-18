@@ -1,0 +1,5 @@
+{
+    "type": "minecraft:div",
+    "left": "sb.math:pi",
+    "right": 180.0
+}

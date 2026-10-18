@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:inverted",
+    "term": {
+        "type": "minecraft:float_value_check",
+        "value": "sb.placing:var/length",
+        "test": {
+            "max": "sb.placing:const/max_length"
+        }
+    }
+}

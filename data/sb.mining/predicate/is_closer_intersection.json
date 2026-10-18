@@ -1,0 +1,7 @@
+{
+    "type": "minecraft:float_value_check",
+    "value": "sb.mining:var/t_min",
+    "test": {
+        "max": "sb.mining:var/closest_beam_distance"
+    }
+}

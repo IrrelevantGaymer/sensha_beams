@@ -1,0 +1,5 @@
+{
+    "type": "minecraft:float_value_check",
+    "value": "sb.raycast:var/step.z",
+    "test": 1.0
+}

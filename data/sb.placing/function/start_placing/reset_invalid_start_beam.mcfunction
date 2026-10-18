@@ -4,4 +4,6 @@ data remove entity @s brightness
 
 tp @s ~ ~ ~
 
+tag @s remove sb.start_placing_beam
+
 return 0

@@ -1,0 +1,79 @@
+{
+    "type": "minecraft:all_of",
+    "terms": [
+        {
+            "__comment__": "if d'.x == 0.0 then B_min.x <= o'.x <= B_max.x",
+            "type": "minecraft:any_of",
+            "terms": [
+                {
+                    "type": "minecraft:inverted",
+                    "term": {
+                        "type": "minecraft:float_value_check",
+                        "value": "sb.mining:var/transform.dir.x",
+                        "test": 0.0
+                    }
+                },
+                {
+                    "type": "minecraft:float_value_check",
+                    "value": "sb.mining:var/transform.origin.x",
+                    "test": {
+                        "min": "sb.mining:var/min.x",
+                        "max": "sb.mining:var/max.x"
+                    }
+                }
+            ]
+        },
+        {
+            "__comment__": "if d'.y == 0.0 then B_min.y <= o'.y <= B_max.y",
+            "type": "minecraft:any_of",
+            "terms": [
+                {
+                    "type": "minecraft:inverted",
+                    "term": {
+                        "type": "minecraft:float_value_check",
+                        "value": "sb.mining:var/transform.dir.x",
+                        "test": 0.0
+                    }
+                },
+                {
+                    "type": "minecraft:float_value_check",
+                    "value": "sb.mining:var/transform.origin.x",
+                    "test": {
+                        "min": "sb.mining:var/min.x",
+                        "max": "sb.mining:var/max.x"
+                    }
+                }
+            ]
+        },
+        {
+            "__comment__": "if d'.z == 0.0 then B_min.z <= o'.z <= B_max.z",
+            "type": "minecraft:any_of",
+            "terms": [
+                {
+                    "type": "minecraft:inverted",
+                    "term": {
+                        "type": "minecraft:float_value_check",
+                        "value": "sb.mining:var/transform.dir.x",
+                        "test": 0.0
+                    }
+                },
+                {
+                    "type": "minecraft:float_value_check",
+                    "value": "sb.mining:var/transform.origin.x",
+                    "test": {
+                        "min": "sb.mining:var/min.x",
+                        "max": "sb.mining:var/max.x"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "minecraft:float_value_check", 
+            "value": "sb.mining:var/t_min", 
+            "test": {
+                "min": 0.0, 
+                "max": "sb.mining:var/t_max"
+            }
+        }
+    ]
+}

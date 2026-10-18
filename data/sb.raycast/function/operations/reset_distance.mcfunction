@@ -1,1 +1,0 @@
-data modify entity @s data.distance set value 0.0

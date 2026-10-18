@@ -1,7 +1,0 @@
-{
-    "type": "minecraft:add", 
-    "inputs": [
-        "sb.placing:scale",
-        "sb.placing:scale_delta"
-    ]
-}

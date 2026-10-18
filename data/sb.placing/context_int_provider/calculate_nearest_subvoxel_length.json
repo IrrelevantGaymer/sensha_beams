@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:from_float",
+    "input": {
+        "type": "minecraft:round",
+        "input": {
+            "type": "minecraft:mul",
+            "inputs": [
+                "sb.placing:var/length_to_place",
+                16.0
+            ]
+        }
+    }
+}

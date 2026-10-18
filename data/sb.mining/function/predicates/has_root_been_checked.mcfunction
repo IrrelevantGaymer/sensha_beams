@@ -1,1 +1,1 @@
-return run function sb.mining:operations/has_root_been_checked with entity @s data
+return run function sb.mining:operations/has_root_been_checked with storage sensha_beams:mining

@@ -1,14 +1,20 @@
 execute \
-    if data entity @s data.prev_closest_beam_UUID \
-    if data entity @s data.closest_beam_UUID \
-    run return run function sb.mining:operations/is_new_intersection with entity @s data
+    if data storage sensha_beams:mining {has_prev_closest_beam: true} \
+    if data storage sensha_beams:mining {has_closest_beam: true} \
+    unless entity @e[ \
+        type=minecraft:item_display, \
+        tag=root_sensha_beam, \
+        tag=sb.prev_closest_beam, tag=sb.closest_beam \
+    ] \
+    run return run return 1
 
 execute \
-    unless data entity @s data.prev_closest_beam_UUID \
-    if data entity @s data.closest_beam_UUID \
-    run return 1
+    unless data storage sensha_beams:mining {has_prev_closest_beam: true} \
+    if data storage sensha_beams:mining {has_closest_beam: true} \
+    run return run return 1
 execute \
-    if data entity @s data.prev_closest_beam_UUID \
-    unless data entity @s data.closest_beam_UUID \
-    run return 1
+    if data storage sensha_beams:mining {has_prev_closest_beam: true} \
+    unless data storage sensha_beams:mining {has_closest_beam: true} \
+    run return run return 1
+
 return 0

@@ -1,0 +1,5 @@
+{
+    "type": "minecraft:storage",
+    "storage": "sensha_beams:raycast",
+    "path": "dir.y"
+}

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:add", "inputs": [
+        {
+            "type": "minecraft:div",
+            "left": {
+                "type": "minecraft:round",
+                "input": {
+                    "type": "minecraft:mul",
+                    "inputs": [
+                        "sb.placing:const/snap_grid_size",
+                        "sb.raycast:out/hit.pos.x"
+                    ]
+                }
+            },
+            "right": "sb.placing:const/snap_grid_size"
+        },
+        "sb.placing:var/delta.x"
+    ]
+}

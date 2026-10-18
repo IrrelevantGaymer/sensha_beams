@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:inverted",
+    "term": {
+        "type": "minecraft:int_value_check",
+        "value": "sb.placing:var/cost",
+        "test": {
+            "max": "sb.placing:var/count"
+        }
+    }
+}

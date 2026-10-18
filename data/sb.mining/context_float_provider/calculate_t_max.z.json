@@ -1,0 +1,49 @@
+{
+    "type": "minecraft:number_dispatcher",
+    "cases": [
+        {
+            "condition": {
+                "type": "minecraft:float_value_check",
+                "value": "sb.mining:var/transform.dir.z",
+                "test": 0.0
+            },
+            "value": "sb.math:max_float"
+        },
+        {
+            "condition": {
+                "type": "minecraft:float_value_check",
+                "value": "sb.mining:var/transform.dir.z",
+                "test": {
+                    "min": 0.0
+                }
+            },
+            "value": {
+                "type": "minecraft:div",
+                "left": {
+                    "type": "minecraft:sub",
+                    "left": "sb.mining:var/max.z",
+                    "right": "sb.mining:var/transform.origin.z"
+                },
+                "right": "sb.mining:var/transform.dir.z"
+            }
+        },
+        {
+            "condition": {
+                "type": "minecraft:float_value_check",
+                "value": "sb.mining:var/transform.dir.z",
+                "test": {
+                    "max": 0.0
+                }
+            },
+            "value": {
+                "type": "minecraft:div",
+                "left": {
+                    "type": "minecraft:sub",
+                    "left": "sb.mining:var/min.z",
+                    "right": "sb.mining:var/transform.origin.z"
+                },
+                "right": "sb.mining:var/transform.dir.z"
+            }
+        }
+    ]
+}

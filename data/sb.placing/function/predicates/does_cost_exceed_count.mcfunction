@@ -1,1 +1,0 @@
-return run function sb.placing:operations/does_cost_exceed_count with entity @s data

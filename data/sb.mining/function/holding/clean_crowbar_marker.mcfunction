@@ -4,7 +4,7 @@ $execute \
     as @e[ \
         type=minecraft:marker, \
         tag=sensha_crowbar, \
-        nbt={data:{UUID: $(UUID)}} \
+        nbt={data:{Owner: $(UUID)}} \
     ] \
     run function sb.mining:operations/update_closest_checked_beam with entity @s
 
@@ -12,12 +12,12 @@ $execute \
     as @e[ \
         type=minecraft:marker, \
         tag=sensha_crowbar, \
-        nbt={data:{UUID: $(UUID)}} \
+        nbt={data:{Owner: $(UUID)}} \
     ] \
     run function sb.mining:update_beam_glows with entity @s
 
 $kill @e[ \
     type=minecraft:marker, \
     tag=sensha_crowbar, \
-    nbt={data: {UUID: $(UUID)}} \
+    nbt={data: {Owner: $(UUID)}} \
 ]

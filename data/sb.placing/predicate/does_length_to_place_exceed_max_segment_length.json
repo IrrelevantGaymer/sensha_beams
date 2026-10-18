@@ -1,0 +1,7 @@
+{
+    "type": "minecraft:float_value_check",
+    "value": "sb.placing:var/length_to_place",
+    "test": {
+        "min": "sb.placing:const/max_segment_length"
+    }
+}

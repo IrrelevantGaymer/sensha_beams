@@ -1,0 +1,5 @@
+{
+    "type": "minecraft:sub",
+    "left": "sb.placing:var/length_to_place",
+    "right": 1.0
+}

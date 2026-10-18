@@ -6,7 +6,7 @@ execute \
     as @a at @s \
     if entity @s[tag=!sb.holding_beam] \
     if data entity @s SelectedItem.components."minecraft:custom_data".is_sensha_beam \
-    run function sb.placing:holding/set_placing_beam with entity @s
+    run function sb.placing:holding/set_placing_beam
 execute \
     as @a \
     if entity @s[tag=sb.holding_beam] \

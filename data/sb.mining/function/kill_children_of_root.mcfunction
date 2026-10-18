@@ -1,1 +1,0 @@
-$kill @e[tag=leaf_sensha_beam, nbt={data:{root_UUID: $(root_UUID)}}]

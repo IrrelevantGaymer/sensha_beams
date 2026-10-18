@@ -1,8 +1,15 @@
-$execute \
-    if data storage sb.debug {raycast: true} \
-    run say checking voxel ($(voxel_x), $(voxel_y), $(voxel_z))
+# tellraw @a [ \
+#     "checking voxel (", \
+#     {storage: "sensha_beams:raycast", nbt: "voxel.x"}, \
+#     ", ", \
+#     {storage: "sensha_beams:raycast", nbt: "voxel.y"}, \
+#     ", ", \
+#     {storage: "sensha_beams:raycast", nbt: "voxel.z"}, \
+#     ")" \
+# ]
 
-$execute \
-    unless block $(voxel_x) $(voxel_y) $(voxel_z) #sb.raycast:passthrough \
-    run return run function sb.raycast:check_voxel/store_raycast_result with entity @s data
+execute \
+    unless block ~ ~ ~ #sb.raycast:passthrough \
+    run return run function sb.raycast:check_voxel/store_raycast_result
+# setblock ~ ~ ~ minecraft:light[level=15]
 return 0

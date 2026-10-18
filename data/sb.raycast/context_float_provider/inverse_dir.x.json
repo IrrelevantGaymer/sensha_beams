@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:conditional", 
+    "condition": {
+        "type": "minecraft:float_value_check", 
+        "value": "sb.raycast:var/dir.x", 
+        "test": 0.0 
+    }, 
+    "on_true": "sb.math:max_float", 
+    "on_false": {
+        "type": "minecraft:div", 
+        "left": 1.0, 
+        "right": "sb.raycast:var/dir.x" 
+    } 
+}

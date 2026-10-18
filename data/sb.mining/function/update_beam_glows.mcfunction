@@ -1,21 +1,23 @@
 execute \
-    if data entity @s data.closest_beam_UUID \
-    run function sb.mining:operations/append_crowbar_source_uuid with entity @s data
+    if data storage sensha_beams:mining {has_closest_beam: true} \
+    as @e[type=minecraft:item_display, tag=root_sensha_beam, tag=sb.closest_beam] \
+    run scoreboard players add @s sb.crowbar_sources 1
 execute \
-    if data entity @s data.prev_closest_beam_UUID \
-    run function sb.mining:operations/remove_crowbar_source_uuid with entity @s data
+    if data storage sensha_beams:mining {has_prev_closest_beam: true} \
+    as @e[type=minecraft:item_display, tag=root_sensha_beam, tag=sb.prev_closest_beam] \
+    run scoreboard players remove @s sb.crowbar_sources 1
 
-$execute \
+execute \
     as @e[ \
         type=minecraft:item_display, \
         tag=root_sensha_beam, \
-        nbt={data:{crowbar_source_UUIDs: [{UUID: $(UUID)}]}} \
+        scores={sb.crowbar_sources=1..}\
     ] \
     run function sb.mining:operations/apply_glow with entity @s data
 execute \
     as @e[ \
         type=minecraft:item_display, \
         tag=root_sensha_beam, \
-        nbt={data:{crowbar_source_UUIDs: []}} \
+        scores={sb.crowbar_sources=0}\
     ] \
     run function sb.mining:operations/remove_glow with entity @s data

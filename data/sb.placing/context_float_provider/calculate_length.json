@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:add",
+    "inputs": [
+        {
+            "type": "minecraft:length",
+            "inputs": [
+                {
+                    "type": "minecraft:sub",
+                    "left": "sb.placing:var/end_pos.x",
+                    "right": "sb.placing:var/start_pos.x"
+                },
+                {
+                    "type": "minecraft:sub",
+                    "left": "sb.placing:var/end_pos.y",
+                    "right": "sb.placing:var/start_pos.y"
+                },
+                {
+                    "type": "minecraft:sub",
+                    "left": "sb.placing:var/end_pos.z",
+                    "right": "sb.placing:var/start_pos.z"
+                }
+            ]
+        },
+        "sb.placing:const/scale"
+    ]
+}

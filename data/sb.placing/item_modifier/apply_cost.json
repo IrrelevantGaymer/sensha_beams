@@ -3,10 +3,9 @@
     "count": {
         "type": "minecraft:negate", 
         "input": {
-            "type": "minecraft:score",
-            "target": "this",
-            "score": "sb.used_beam_count",
-            "fallback": 0
+            "type": "minecraft:storage",
+            "storage": "sensha_beams:placing",
+            "path": "cost"
         }
     },
     "add": true

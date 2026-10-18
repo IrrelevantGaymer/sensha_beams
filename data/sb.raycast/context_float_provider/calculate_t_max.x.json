@@ -1,0 +1,62 @@
+{
+    "type": "minecraft:number_dispatcher",
+    "__comment__": [
+        "switch (dir) {",
+        "   0.0 => sb.math:max_float",
+        "   0.0.. => (voxel + 1 - origin) / dir",
+        "   ..0.0 => (voxel - origin) / dir",
+        "}"
+    ],
+    "cases": [
+        {
+            "condition": {
+                "type": "minecraft:float_value_check",
+                "value": "sb.raycast:var/dir.x",
+                "test": 0.0
+            },
+            "value": "sb.math:max_float"
+        },
+        {
+            "condition": {
+                "type": "minecraft:float_value_check",
+                "value": "sb.raycast:var/dir.x",
+                "test": {
+                    "min": 0.0
+                }
+            },
+            "value": {
+                "type": "minecraft:div",
+                "left": {
+                    "type": "minecraft:add",
+                    "inputs": [
+                        "sb.raycast:var/voxel.x",
+                        1.0,
+                        {
+                            "type": "minecraft:negate",
+                            "input": "sb.raycast:var/origin.x"
+                        }
+                    ]
+                },
+                "right": "sb.raycast:var/dir.x"
+            }
+        },
+        {
+            "condition": {
+                "type": "minecraft:float_value_check",
+                "value": "sb.raycast:var/dir.x",
+                "test": {
+                    "max": 0.0
+                }
+            },
+            "value": {
+                "type": "minecraft:div",
+                "left": {
+                    "type": "minecraft:sub",
+                    "left": "sb.raycast:var/voxel.x",
+                    "right": "sb.raycast:var/origin.x"
+                },
+                "right": "sb.raycast:var/dir.x"
+            }
+        }
+    ]
+}

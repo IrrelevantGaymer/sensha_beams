@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:div",
+    "left": {
+        "type": "minecraft:mul",
+        "inputs": [
+            "sb.placing:var/length_to_place",
+            16.0
+        ]
+    },
+    "right": {
+        "type": "minecraft:from_int",
+        "input": "sb.placing:calculate_nearest_subvoxel_length"
+    }
+}

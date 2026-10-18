@@ -6,5 +6,5 @@ execute if entity @s[tag=sb.invalid_end] run function sb.placing:clear_error
 $kill @e[ \
     type=minecraft:item_display, \
     tag=placing_sensha_beam, \
-    nbt={data: {UUID: $(UUID)}} \
+    nbt={data: {Owner: $(UUID)}} \
 ]

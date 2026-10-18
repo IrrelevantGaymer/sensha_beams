@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:conditional", 
+    "condition": {
+        "type": "minecraft:float_value_check", 
+        "value": "sb.raycast:var/dir.z", 
+        "test": 0.0 
+    }, 
+    "on_true": 0.0, 
+    "on_false": {
+        "type": "minecraft:div", 
+        "left": {
+            "type": "minecraft:abs", 
+            "input": "sb.raycast:var/dir.z"
+        }, 
+        "right": "sb.raycast:var/dir.z" 
+    } 
+}
