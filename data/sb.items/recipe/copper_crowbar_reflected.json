@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "group": "copper_crowbar",
+    "key": {
+        "/": "minecraft:stick",
+        "O": "minecraft:copper_ingot"
+    },
+    "pattern": ["  O", " / ", " O "],
+    "result": {
+        "id": "minecraft:copper_pickaxe",
+        "components": {
+            "minecraft:item_name": {"text": "Copper Crowbar", "color": "white"},
+            "minecraft:item_model": "sensha_tools:copper_crowbar",
+            "minecraft:piercing_weapon": {
+                "deals_knockback": false,
+                "dismounts": false
+            },
+            "minecraft:attack_range": {
+                "min_creative_reach": 0.0,
+                "min_reach": 0.0,
+                "max_creative_reach": 0.0,
+                "max_reach": 0.0,
+                "hitbox_margin": 0.0
+            },
+            "minecraft:enchantment_glint_override": false,
+            "minecraft:enchantments": {
+                "sb.mining:mine_beam": 1
+            },
+            "minecraft:tooltip_display": {
+                "hidden_components": ["minecraft:enchantments"]
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:max_damage": 190,
+            "minecraft:damage": 0,
+            "minecraft:custom_data": {
+                "is_sensha_crowbar": true
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 # Sensha Beams
 
-Inspired by support beams in Vintage Story, Sensha Beams gives players more building freedom by placing beams spanning one point to another.  Players can also break beams using a crowbar.
+Inspired by support beams in Vintage Story, Sensha Beams is a datapack that gives players more building freedom by placing beams spanning one point to another.  Players can also break beams using a crowbar.
 
 ![Placing Beams around a window and then Breaking them with a crowbar](assets/sensha_beams.gif)
 

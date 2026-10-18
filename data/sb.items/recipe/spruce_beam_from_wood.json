@@ -1,0 +1,49 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": "spruce_wood",
+    "result": {
+        "id": "minecraft:potion",
+        "components": {
+            "minecraft:item_name": {"text": "Spruce Beam", "color": "white"},
+            "minecraft:item_model": "sensha_beams:spruce/12",
+            "!minecraft:potion_contents": {},
+            "minecraft:consumable": {
+                "consume_seconds": 3.4028235e38,
+                "animation": "bundle",
+                "has_consume_particles": false
+            },
+            "minecraft:use_effects": {
+                "can_sprint": true,
+                "speed_multiplier": 1
+            },
+            "minecraft:piercing_weapon": {
+                "deals_knockback": false,
+                "dismounts": false
+            },
+            "minecraft:attack_range": {
+                "min_creative_reach": 0.0,
+                "min_reach": 0.0,
+                "max_creative_reach": 0.0,
+                "max_reach": 0.0,
+                "hitbox_margin": 0.0
+            },
+            "minecraft:enchantment_glint_override": false,
+            "minecraft:enchantments": {
+                "sb.placing:beam_cancel": 1
+            },
+            "minecraft:tooltip_display": {
+                "hidden_components": ["minecraft:enchantments"]
+            },
+            "minecraft:max_stack_size": 64,
+            "minecraft:cooking_fuel": {
+                "burn_time": 12,
+                "speed_multiplier": "minecraft:cooking/speed_default"
+            },
+            "minecraft:custom_data": {
+                "sensha_beam": "oak",
+                "is_sensha_beam": true
+            }
+        },
+        "count": 64
+    }
+}
