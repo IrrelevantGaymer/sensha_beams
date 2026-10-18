@@ -23,7 +23,6 @@ Inspired by support beams in Vintage Story, Sensha Beams is a datapack that give
         - Lines of Bricks
         - Only considering for Bricks, Resin Bricks, Nether Bricks, and Red Nether Bricks
 - Implement Recipes
-    - Log/Hyphae or Stripped Log/Hyphae in Stonecutter -> 64 Wooden Beams
     - 1 Carpet + 4 Wooden Beams -> 4 Wool Covered Wooden Beams
     - 1 Metal Block -> 64 Metal Beams
     - 1 Brick Block -> 32 Brick Trims
@@ -32,7 +31,6 @@ Inspired by support beams in Vintage Story, Sensha Beams is a datapack that give
 - Better raycasting
     - detect block shapes for more accurate beam placement in/against partial blocks
     - implement optimizations to query less beams when holding a crowbar
-    - implement optimizations to do less entity selection queries
     - place beams 1/16 away from the block being placed against
 - Damage crowbar on use (in survival) and break if need be 
 - Add more crowbars
