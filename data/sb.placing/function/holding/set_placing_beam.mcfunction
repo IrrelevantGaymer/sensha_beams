@@ -10,6 +10,12 @@ data modify storage sensha_beams:placing Owner set from entity @s UUID
 data modify \
     storage sensha_beams:placing sensha_beam \
     set from entity @s SelectedItem.components."minecraft:custom_data".sensha_beam
+data remove storage sensha_beams:placing dyed_color
+execute \
+    if data entity @s SelectedItem.components."minecraft:dyed_color" \
+    run data modify \
+        storage sensha_beams:placing dyed_color \
+        set from entity @s SelectedItem.components."minecraft:dyed_color"
 data modify storage sensha_beams:placing count set from entity @s SelectedItem.count
 
 data modify storage sensha_beams:placing rand_delta.x set compute default float sb.placing:randomized_delta

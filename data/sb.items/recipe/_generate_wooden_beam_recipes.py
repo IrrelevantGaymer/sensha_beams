@@ -34,6 +34,44 @@ beam_names = {
     "warped": "Warped",
 }
 
+colors = [
+    "white",
+    "orange",
+    "magenta",
+    "light_blue",
+    "yellow",
+    "lime",
+    "pink",
+    "gray",
+    "light_gray",
+    "cyan",
+    "purple",
+    "blue",
+    "brown",
+    "green",
+    "red",
+    "black"
+]
+
+color_values = {
+    "white": 16383998,
+    "orange": 16351261,
+    "magenta": 13061821,
+    "light_blue": 3847130,
+    "yellow": 16701501,
+    "lime": 8439583,
+    "pink": 15961002,
+    "gray": 4673362,
+    "light_gray": 10329495,
+    "cyan": 1481884,
+    "purple": 8991416,
+    "blue": 3949738,
+    "brown": 8606770,
+    "green": 6192150,
+    "red": 11546150,
+    "black": 1908001 
+}
+
 ingredient_types = ["log", "wood", "stripped_log", "stripped_wood"]
 
 beam_log_ingredient = {
@@ -170,7 +208,29 @@ def stone_cutting_wooden_beam_recipe(beam: str, ingredient_type: str) -> str:
 }}
 '''
 
+# not sure how to add recipes for wool_covered_wooden_beam
+def crafting_wool_covered_wooden_beam_recipe(beam: str, color: str) -> str:
+    raise NotImplemented("not implemented")
+
+# considering moving wooden_beams to a separate item, potion is currently temporary
+def dye_wool_covered_wooden_beam_recipe(beam: str) -> str:
+    return f'''\
+{{
+    "type": "minecraft:crafting_dye",
+    "category": "building",
+    "group": "dyed_oak_beam",
+    "dye": "#minecraft:dyes",
+    "target": "minecraft:potion",
+    "result": {{
+        "id": "minecraft:potion"
+    }}
+}}
+'''
+
 for beam in beams:
+    path = Path(f"data/sb.items/recipe/wool_covered/dye_{beam}_beam.json")
+    with open(path, "w") as file:
+        file.write(dye_wool_covered_wooden_beam_recipe(beam))
     for ingredient_type in ingredient_types:
         if skip(beam, ingredient_type):
             continue

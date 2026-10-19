@@ -1,3 +1,5 @@
+# TODO add modifiers to work for wool covered_beams
+
 $loot spawn ~ ~ ~ loot { \
     "pools": [ \
         { \

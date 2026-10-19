@@ -13,6 +13,12 @@ data modify storage sensha_beams:placing root_UUID set from entity @s UUID
 data modify storage sensha_beams:placing start_pos set from entity @s data.start_pos
 data modify storage sensha_beams:placing length set from entity @s data.length
 data modify storage sensha_beams:placing sensha_beam set from entity @s data.sensha_beam
+data remove storage sensha_beams:placing dyed_color
+execute \
+    if data entity @s data.dyed_color \
+    run data modify \
+        storage sensha_beams:placing dyed_color \
+        set from entity @s data.dyed_color
 data modify storage sensha_beams:placing cost set compute default integer { \
     type: "minecraft:from_float", input: {type: "minecraft:round", input: { \
         type: "minecraft:mul", \
@@ -63,6 +69,7 @@ scoreboard players set @s sb.crowbar_sources 0
 
 data remove entity @s data.Owner
 data remove entity @s data.count
+data remove entity @s data.dyed_color
 data remove entity @s brightness
 data modify entity @s data.root_UUID set from storage sensha_beams:placing root_UUID
 data modify entity @s data.yaw_r set from storage sensha_beams:placing yaw_r
