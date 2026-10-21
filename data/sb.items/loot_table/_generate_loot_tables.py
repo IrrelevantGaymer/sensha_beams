@@ -34,6 +34,79 @@ beam_names = {
     "warped": "Warped",
 }
 
+beam_placing_sounds = {
+    "acacia": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "bamboo": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "birch": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "cherry": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "crimson": {
+        "start": {"name": "minecraft:block.nether_wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.nether_wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "dark_oak": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "jungle": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "mangrove": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "oak": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    },
+    "pale_oak": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "poplar": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    },
+    "spruce": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "stripped_bamboo": {
+        "start": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    }, 
+    "warped": {
+        "start": {"name": "minecraft:block.nether_wood.place", "volume": 1.0, "pitch": 1.0},
+        "active": {"name": "minecraft:block.nether_wood.place", "volume": 1.0, "pitch": 1.0},
+        "end": {"name": "minecraft:entity.villager.work_fletcher", "volume": 0.4, "pitch": 1.0},
+    },
+}
+
 def loot_table(beam: str) -> str:
     return f'''\
 {{
@@ -86,7 +159,22 @@ def loot_table(beam: str) -> str:
                 }},
                 "minecraft:custom_data": {{
                   "sensha_beam": "{beam}",
-                  "is_sensha_beam": true
+                  "is_sensha_beam": true,
+                  "start_place_sound": {{
+                    "name": "{beam_placing_sounds[beam]["start"]["name"]}",
+                    "volume": {beam_placing_sounds[beam]["start"]["volume"]},
+                    "pitch": {beam_placing_sounds[beam]["start"]["pitch"]}
+                  }},
+                  "active_place_sound": {{
+                    "name": "{beam_placing_sounds[beam]["active"]["name"]}",
+                    "volume": {beam_placing_sounds[beam]["active"]["volume"]},
+                    "pitch": {beam_placing_sounds[beam]["active"]["pitch"]}
+                  }},
+                  "end_place_sound": {{
+                    "name": "{beam_placing_sounds[beam]["end"]["name"]}",
+                    "volume": {beam_placing_sounds[beam]["end"]["volume"]},
+                    "pitch": {beam_placing_sounds[beam]["end"]["pitch"]}
+                  }}
                 }}
               }}
             }}

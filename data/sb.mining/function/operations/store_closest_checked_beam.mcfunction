@@ -27,4 +27,39 @@ execute \
         tag=root_sensha_beam, tag=sb.prev_closest_beam \
     ] remove sb.prev_closest_beam
 
+data remove storage sensha_beams:mining hit
+execute \
+    if data storage sensha_beams:mining has_closest_beam \
+    run data modify storage sensha_beams:mining hit.x set compute default float \
+        {type: "minecraft:add", inputs: [ \
+            "sb.raycast:var/origin.x", \
+            {type: "minecraft:mul", inputs: [ \
+                "sb.mining:var/t_min", \
+                "sb.raycast:var/dir.x" \
+            ]} \
+        ]}
+execute \
+    if data storage sensha_beams:mining has_closest_beam \
+    run data modify storage sensha_beams:mining hit.y set compute default float \
+        {type: "minecraft:add", inputs: [ \
+            "sb.raycast:var/origin.y", \
+            {type: "minecraft:mul", inputs: [ \
+                "sb.mining:var/t_min", \
+                "sb.raycast:var/dir.y" \
+            ]} \
+        ]}
+execute \
+    if data storage sensha_beams:mining has_closest_beam \
+    run data modify storage sensha_beams:mining hit.z set compute default float \
+        {type: "minecraft:add", inputs: [ \
+            "sb.raycast:var/origin.z", \
+            {type: "minecraft:mul", inputs: [ \
+                "sb.mining:var/t_min", \
+                "sb.raycast:var/dir.z" \
+            ]} \
+        ]}
+execute \
+    if data storage sensha_beams:mining has_closest_beam \
+    run data modify entity @s data.hit set from storage sensha_beams:mining hit
+
 tag @s remove sb.detecting_beam

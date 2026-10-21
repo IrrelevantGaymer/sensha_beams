@@ -32,6 +32,7 @@ data modify storage sensha_beams:mining hit_z set from storage sensha_beams:mini
 execute \
     if data storage sensha_beams:mining {gamemode: 0} \
     run function sb.mining:drop_loot_root with storage sensha_beams:mining
+function sb.mining:break_beam_sound with storage sensha_beams:mining
 
 kill @e[ \
     type=minecraft:item_display, \

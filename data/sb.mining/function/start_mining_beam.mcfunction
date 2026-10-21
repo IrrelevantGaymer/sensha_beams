@@ -12,4 +12,5 @@ data modify \
         limit=1, sort=arbitrary \
     ] data.closest_beam_UUID
 
+# TODO add actually check if closest_beam_UUID exists so we don't rely on missing data with macros to not run code
 function sb.mining:mine_beam with storage sensha_beams:mining

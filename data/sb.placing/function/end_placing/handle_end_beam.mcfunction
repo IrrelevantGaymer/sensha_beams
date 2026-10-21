@@ -61,6 +61,7 @@ execute \
     run return run data modify entity @s item.id set value "minecraft:red_concrete"
 
 data modify entity @s item.id set value "minecraft:lime_concrete"
+data modify entity @s data.end_pos set from storage sensha_beams:placing end_pos
 data modify entity @s data.midpoint set from storage sensha_beams:placing midpoint
 data modify entity @s data.length set from storage sensha_beams:placing length
 

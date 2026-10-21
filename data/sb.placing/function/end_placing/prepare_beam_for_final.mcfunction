@@ -11,6 +11,7 @@ data modify storage sensha_beams:placing pitch_r set compute default float \
     {type: "minecraft:mul", inputs: ["sb.placing:var/pitch", "sb.math:deg_to_rad"]}
 data modify storage sensha_beams:placing root_UUID set from entity @s UUID
 data modify storage sensha_beams:placing start_pos set from entity @s data.start_pos
+data modify storage sensha_beams:placing end_pos set from entity @s data.end_pos
 data modify storage sensha_beams:placing length set from entity @s data.length
 data modify storage sensha_beams:placing sensha_beam set from entity @s data.sensha_beam
 data modify storage sensha_beams:placing cost set compute default integer { \
@@ -70,3 +71,9 @@ data modify entity @s data.pitch_r set from storage sensha_beams:placing pitch_r
 function sb.placing:teleport_to_coord with storage sensha_beams:placing start_pos
 
 execute positioned as @s run function sb.placing:end_placing/place_beam_segments with entity @s data
+
+data modify storage sensha_beams:placing sound set from entity @s data.end_place_sound
+data modify storage sensha_beams:placing sound.x set from storage sensha_beams:placing end_pos.x
+data modify storage sensha_beams:placing sound.y set from storage sensha_beams:placing end_pos.y
+data modify storage sensha_beams:placing sound.z set from storage sensha_beams:placing end_pos.z
+function sb.placing:playsound with storage sensha_beams:placing sound

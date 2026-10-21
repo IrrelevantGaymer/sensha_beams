@@ -41,6 +41,22 @@
             },
             "minecraft:custom_data": {
                 "sensha_beam": "crimson",
+                "is_sensha_beam": true,
+                "start_place_sound": {
+                "name": "minecraft:block.nether_wood.place",
+                "volume": 1.0,
+                "pitch": 1.0
+                },
+                "active_place_sound": {
+                "name": "minecraft:block.nether_wood.place",
+                "volume": 1.0,
+                "pitch": 1.0
+                },
+                "end_place_sound": {
+                "name": "minecraft:entity.villager.work_fletcher",
+                "volume": 1.0,
+                "pitch": 1.0
+                }
             }
         },
         "count": 64

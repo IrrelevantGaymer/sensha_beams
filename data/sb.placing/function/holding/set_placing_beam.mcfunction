@@ -12,6 +12,16 @@ data modify \
     set from entity @s SelectedItem.components."minecraft:custom_data".sensha_beam
 data modify storage sensha_beams:placing count set from entity @s SelectedItem.count
 
+data modify \
+    storage sensha_beams:placing start_place_sound \
+    set from entity @s SelectedItem.components."minecraft:custom_data".start_place_sound
+data modify \
+    storage sensha_beams:placing active_place_sound \
+    set from entity @s SelectedItem.components."minecraft:custom_data".active_place_sound
+data modify \
+    storage sensha_beams:placing end_place_sound \
+    set from entity @s SelectedItem.components."minecraft:custom_data".end_place_sound
+
 data modify storage sensha_beams:placing rand_delta.x set compute default float sb.placing:randomized_delta
 data modify storage sensha_beams:placing rand_delta.y set compute default float sb.placing:randomized_delta
 data modify storage sensha_beams:placing rand_delta.z set compute default float sb.placing:randomized_delta

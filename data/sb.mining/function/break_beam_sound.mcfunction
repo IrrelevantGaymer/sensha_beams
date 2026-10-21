@@ -1,0 +1,1 @@
+$playsound minecraft:entity.zombie.break_wooden_door block @a $(hit_x) $(hit_y) $(hit_z) 0.2 0.85
