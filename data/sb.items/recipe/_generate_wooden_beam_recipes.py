@@ -161,8 +161,7 @@ def stone_cutting_wooden_beam_recipe(beam: str, ingredient_type: str) -> str:
                 "speed_multiplier": "minecraft:cooking/speed_default"
             }},
             "minecraft:custom_data": {{
-                "sensha_beam": "oak",
-                "is_sensha_beam": true
+                "sensha_beam": "{beam}",
             }}
         }},
         "count": 64
