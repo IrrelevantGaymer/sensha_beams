@@ -1,4 +1,4 @@
-$loot spawn ~ ~ ~ loot { \
+$loot spawn $(hit_x) $(hit_y) $(hit_z) loot { \
     "pools": [ \
         { \
             "rolls": 1, \
