@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:location_check",
+        "predicate": {
+        "block": {
+            "blocks": "#minecraft:stairs",
+            "state": {
+            "facing": "west",
+            "half": "top",
+            "shape": "inner_left"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "blocks": "#minecraft:stairs",
+          "state": {
+            "facing": "south",
+            "half": "top",
+            "shape": "inner_right"
+          }
+        }
+      }
+    }
+  ]
+}

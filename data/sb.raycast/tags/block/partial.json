@@ -1,0 +1,8 @@
+{
+    "values": [
+        "#minecraft:slabs",
+        "#minecraft:stairs",
+        "#sb.raycast:panes",
+        "minecraft:snow"
+    ]
+}

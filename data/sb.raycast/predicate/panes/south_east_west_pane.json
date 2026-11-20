@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:location_check",
+  "predicate": {
+    "block": {
+      "blocks": "#sb.raycast:panes",
+      "state": {
+        "north": "false",
+        "south": "true",
+        "east": "true",
+        "west": "true"
+      }
+    }
+  }
+}

@@ -9,7 +9,8 @@
 # ]
 
 execute \
+    positioned ~ ~ ~ \
     unless block ~ ~ ~ #sb.raycast:passthrough \
+    if predicate sb.raycast:is_full_block \
     run return run function sb.raycast:check_voxel/store_raycast_result
-# setblock ~ ~ ~ minecraft:light[level=15]
 return 0

@@ -1,0 +1,38 @@
+{
+    "type": "minecraft:any_of",
+    "terms": [
+        {
+            "type": "minecraft:inverted",
+            "term": {
+                "type": "minecraft:location_check",
+                "predicate": {
+                    "block": {
+                        "blocks": "#sb.raycast:partial"
+                    }
+                }
+            }
+        },
+        {
+            "type": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:slabs",
+                    "state": {
+                        "type": "double"
+                    }
+                }
+            }
+        },
+        {
+            "type": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "minecraft:snow",
+                    "state": {
+                        "layers": "8"
+                    }
+                }
+            }
+        }
+    ]
+}

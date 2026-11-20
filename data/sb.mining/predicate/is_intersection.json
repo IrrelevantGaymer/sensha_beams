@@ -31,16 +31,16 @@
                     "type": "minecraft:inverted",
                     "term": {
                         "type": "minecraft:float_value_check",
-                        "value": "sb.mining:var/transform.dir.x",
+                        "value": "sb.mining:var/transform.dir.y",
                         "test": 0.0
                     }
                 },
                 {
                     "type": "minecraft:float_value_check",
-                    "value": "sb.mining:var/transform.origin.x",
+                    "value": "sb.mining:var/transform.origin.y",
                     "test": {
-                        "min": "sb.mining:var/min.x",
-                        "max": "sb.mining:var/max.x"
+                        "min": "sb.mining:var/min.y",
+                        "max": "sb.mining:var/max.y"
                     }
                 }
             ]
@@ -53,16 +53,16 @@
                     "type": "minecraft:inverted",
                     "term": {
                         "type": "minecraft:float_value_check",
-                        "value": "sb.mining:var/transform.dir.x",
+                        "value": "sb.mining:var/transform.dir.z",
                         "test": 0.0
                     }
                 },
                 {
                     "type": "minecraft:float_value_check",
-                    "value": "sb.mining:var/transform.origin.x",
+                    "value": "sb.mining:var/transform.origin.z",
                     "test": {
-                        "min": "sb.mining:var/min.x",
-                        "max": "sb.mining:var/max.x"
+                        "min": "sb.mining:var/min.z",
+                        "max": "sb.mining:var/max.z"
                     }
                 }
             ]

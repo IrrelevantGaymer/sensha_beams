@@ -1,0 +1,91 @@
+{
+    "type": "minecraft:all_of",
+    "terms": [
+        {
+            "__comment__": "if dir.x == 0.0 then cuboid.min.x <= origin.x - voxel.x <= cuboid.max.x",
+            "type": "minecraft:any_of",
+            "terms": [
+                {
+                    "type": "minecraft:inverted",
+                    "term": {
+                        "type": "minecraft:float_value_check",
+                        "value": "sb.raycast:var/dir.x",
+                        "test": 0.0
+                    }
+                },
+                {
+                    "type": "minecraft:float_value_check",
+                    "value": {
+                        "type": "minecraft:sub",
+                        "left": "sb.raycast:var/origin.x",
+                        "right": "sb.raycast:var/voxel.x"
+                    },
+                    "test": {
+                        "min": "sb.raycast:var/partial/cuboid.min.x",
+                        "max": "sb.raycast:var/partial/cuboid.max.x"
+                    }
+                }
+            ]
+        },
+        {
+            "__comment__": "if dir.y == 0.0 then cuboid.min.y <= origin.y - voxel.y <= cuboid.max.y",
+            "type": "minecraft:any_of",
+            "terms": [
+                {
+                    "type": "minecraft:inverted",
+                    "term": {
+                        "type": "minecraft:float_value_check",
+                        "value": "sb.raycast:var/dir.y",
+                        "test": 0.0
+                    }
+                },
+                {
+                    "type": "minecraft:float_value_check",
+                    "value": {
+                        "type": "minecraft:sub",
+                        "left": "sb.raycast:var/origin.y",
+                        "right": "sb.raycast:var/voxel.y"
+                    },
+                    "test": {
+                        "min": "sb.raycast:var/partial/cuboid.min.y",
+                        "max": "sb.raycast:var/partial/cuboid.max.y"
+                    }
+                }
+            ]
+        },
+        {
+            "__comment__": "if dir.z == 0.0 then cuboid.min.z <= origin.z <= cuboid.max.z",
+            "type": "minecraft:any_of",
+            "terms": [
+                {
+                    "type": "minecraft:inverted",
+                    "term": {
+                        "type": "minecraft:float_value_check",
+                        "value": "sb.raycast:var/dir.z",
+                        "test": 0.0
+                    }
+                },
+                {
+                    "type": "minecraft:float_value_check",
+                    "value": {
+                        "type": "minecraft:sub",
+                        "left": "sb.raycast:var/origin.z",
+                        "right": "sb.raycast:var/voxel.z"
+                    },
+                    "test": {
+                        "min": "sb.raycast:var/partial/cuboid.min.z",
+                        "max": "sb.raycast:var/partial/cuboid.max.z"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "minecraft:float_value_check", 
+            "value": "sb.raycast:var/partial/t_min", 
+            "test": {
+                "min": 0.0, 
+                "max": "sb.raycast:var/partial/t_max"
+            }
+        }
+    ]
+}

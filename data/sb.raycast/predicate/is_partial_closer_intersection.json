@@ -1,0 +1,7 @@
+{
+    "type": "minecraft:float_value_check",
+    "value": "sb.raycast:var/partial/t_min",
+    "test": {
+        "max": "sb.raycast:var/partial/distance"
+    }
+}
