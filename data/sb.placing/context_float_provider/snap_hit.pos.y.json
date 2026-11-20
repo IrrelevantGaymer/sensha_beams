@@ -8,7 +8,20 @@
                     "type": "minecraft:mul",
                     "inputs": [
                         "sb.placing:const/snap_grid_size",
-                        "sb.raycast:out/hit.pos.y"
+                        {
+                            "type": "minecraft:add",
+                            "inputs": [
+                                "sb.raycast:out/hit.pos.y",
+                                {
+                                    "type": "minecraft:mul",
+                                    "inputs": [
+                                        "sb.raycast:out/hit.normal.y",
+                                        "sb.placing:const/scale",
+                                        0.5
+                                    ]
+                                }
+                            ]
+                        }
                     ]
                 }
             },
