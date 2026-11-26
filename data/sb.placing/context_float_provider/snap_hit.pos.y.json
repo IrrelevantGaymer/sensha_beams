@@ -15,6 +15,12 @@
                                 {
                                     "type": "minecraft:mul",
                                     "inputs": [
+                                        {
+                                            "type": "minecraft:storage",
+                                            "storage": "sensha_beams:settings",
+                                            "path": "offset_placing",
+                                            "fallback": 0
+                                        },
                                         "sb.raycast:out/hit.normal.y",
                                         "sb.placing:const/scale",
                                         0.5

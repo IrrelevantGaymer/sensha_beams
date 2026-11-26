@@ -1,1 +1,1 @@
-{"values":["sb.load:scoreboards", "sb.raycast:generate_tables/generate"]}
+{"values":["sb.load:scoreboards", "sb.load:settings", "sb.raycast:generate_tables/generate"]}
