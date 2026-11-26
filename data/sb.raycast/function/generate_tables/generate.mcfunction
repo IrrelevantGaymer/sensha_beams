@@ -46,6 +46,16 @@ function sb.raycast:generate_tables/panes/east_pane
 function sb.raycast:generate_tables/panes/west_pane
 function sb.raycast:generate_tables/panes/pane
 
+#chains
+function sb.raycast:generate_tables/chains/x
+function sb.raycast:generate_tables/chains/y
+function sb.raycast:generate_tables/chains/z
+
+#rods
+function sb.raycast:generate_tables/rods/x
+function sb.raycast:generate_tables/rods/y
+function sb.raycast:generate_tables/rods/z
+
 #panels
 function sb.raycast:generate_tables/panels/top
 function sb.raycast:generate_tables/panels/bottom
@@ -78,6 +88,42 @@ function sb.raycast:generate_tables/fences/fence
 #anvils
 function sb.raycast:generate_tables/anvils/x
 function sb.raycast:generate_tables/anvils/z
+
+#signs
+function sb.raycast:generate_tables/signs/floor
+function sb.raycast:generate_tables/signs/wall_north
+function sb.raycast:generate_tables/signs/wall_south
+function sb.raycast:generate_tables/signs/wall_east
+function sb.raycast:generate_tables/signs/wall_west
+
+#hanging_signs
+function sb.raycast:generate_tables/hanging_signs/ceiling_other
+function sb.raycast:generate_tables/hanging_signs/ceiling_x
+function sb.raycast:generate_tables/hanging_signs/ceiling_z
+function sb.raycast:generate_tables/hanging_signs/wall_x
+function sb.raycast:generate_tables/hanging_signs/wall_z
+
+#plates
+function sb.raycast:generate_tables/plates/pressed
+function sb.raycast:generate_tables/plates/unpressed
+
+#buttons
+function sb.raycast:generate_tables/buttons/ceiling_x_pressed
+function sb.raycast:generate_tables/buttons/ceiling_z_pressed
+function sb.raycast:generate_tables/buttons/floor_x_pressed
+function sb.raycast:generate_tables/buttons/floor_z_pressed
+function sb.raycast:generate_tables/buttons/wall_north_pressed
+function sb.raycast:generate_tables/buttons/wall_south_pressed
+function sb.raycast:generate_tables/buttons/wall_east_pressed
+function sb.raycast:generate_tables/buttons/wall_west_pressed
+function sb.raycast:generate_tables/buttons/ceiling_x_unpressed
+function sb.raycast:generate_tables/buttons/ceiling_z_unpressed
+function sb.raycast:generate_tables/buttons/floor_x_unpressed
+function sb.raycast:generate_tables/buttons/floor_z_unpressed
+function sb.raycast:generate_tables/buttons/wall_north_unpressed
+function sb.raycast:generate_tables/buttons/wall_south_unpressed
+function sb.raycast:generate_tables/buttons/wall_east_unpressed
+function sb.raycast:generate_tables/buttons/wall_west_unpressed
 
 #walls
 function sb.raycast:generate_tables/walls/up_wall

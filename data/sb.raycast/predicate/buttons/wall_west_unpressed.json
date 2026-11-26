@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:location_check",
+    "predicate": {
+        "block": {
+            "blocks": "#minecraft:buttons",
+            "state": {
+                "face": "wall",
+                "facing": "west",
+                "powered": "false"
+            }
+        }
+    }
+}

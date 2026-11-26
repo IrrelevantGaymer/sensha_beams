@@ -1,0 +1,61 @@
+{
+    "type": "minecraft:all_of",
+    "terms": [
+        {
+            "type": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:ceiling_hanging_signs"
+                }
+            }
+        },
+        {
+            "type": "minecraft:inverted",
+            "term": {
+                "type": "minecraft:any_of",
+                "terms": [
+                    {
+                        "type": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "state": {
+                                    "rotation": "0"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "type": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "state": {
+                                    "rotation": "4"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "type": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "state": {
+                                    "rotation": "8"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "type": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "state": {
+                                    "rotation": "12"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:location_check",
+    "predicate": {
+        "block": {
+            "blocks": "#minecraft:wall_signs",
+            "state": {
+                "facing": "east"
+            }
+        }
+    }
+}

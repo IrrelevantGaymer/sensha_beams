@@ -3,11 +3,14 @@ from pathlib import Path
 
 halves = ["top", "bottom"]
 dirs = ["north", "south", "east", "west"]
+vert_attach = ["ceiling", "floor"]
 subdirs = ["northwest", "southwest", "southeast", "northeast"]
 corners = ["inner", "outer"]
 panels = ["top", "bottom", "north", "south", "east", "west"]
-axes = ["x", "z"]
+about_y_axes = ["x", "z"]
+axes = ["x", "y", "z"]
 connection_types = ["none", "low", "tall"]
+activation = ["pressed", "unpressed"]
 
 # I'm going to allow certain "impossible" states for creative mode use
 def is_state_possible(up: bool, connects: dict[str, str]) -> bool:
@@ -46,6 +49,14 @@ for connects in (dict(zip(dirs, values)) for values in itertools.product([True, 
     shape = f"{prefix}pane"
     commands.append(check_command(f"panes/{shape}", f"check_panes/{shape}"))
 
+commands.append("\n#chains")
+for axis in axes:
+    commands.append(check_command(f"chains/{axis}", f"check_chains/{axis}"))
+
+commands.append("\n#rods")
+for axis in axes:
+    commands.append(check_command(f"rods/{axis}", f"check_rods/{axis}"))
+
 commands.append("\n#panels")
 for panel in panels:
     commands.append(check_command(f"panels/{panel}", f"check_panels/{panel}"))
@@ -63,8 +74,32 @@ for connects in (dict(zip(dirs, values)) for values in itertools.product([True, 
     commands.append(check_command(f"fences/{shape}", f"check_fences/{shape}"))
 
 commands.append("\n#anvils")
-for axis in axes:
+for axis in about_y_axes:
     commands.append(check_command(f"anvils/{axis}", f"check_anvils/{axis}"))
+
+commands.append("\n#signs")
+commands.append(check_command("signs/floor", "check_signs/floor"))
+for dir in dirs:
+    commands.append(check_command(f"signs/wall_{dir}", f"check_signs/wall_{dir}"))
+
+commands.append("\n#hanging_signs")
+commands.append(check_command("hanging_signs/ceiling_other", "check_hanging_signs/ceiling_other"))
+for axis in about_y_axes:
+    commands.append(check_command(f"hanging_signs/ceiling_{axis}", f"check_hanging_signs/ceiling_{axis}"))
+for axis in about_y_axes:
+    commands.append(check_command(f"hanging_signs/wall_{axis}", f"check_hanging_signs/wall_{axis}"))
+
+commands.append("\n#plates")
+for state in activation:
+    commands.append(check_command(f"plates/{state}", f"check_plates/{state}"))
+
+commands.append("\n#buttons")
+for state in activation:
+    for vert in vert_attach:
+        for axis in about_y_axes:
+            commands.append(check_command(f"buttons/{vert}_{axis}_{state}", f"check_buttons/{vert}_{axis}_{state}"))
+    for dir in dirs:
+        commands.append(check_command(f"buttons/wall_{dir}_{state}", f"check_buttons/wall_{dir}_{state}"))
 
 commands.append("\n#walls")
 for up in [True, False]:

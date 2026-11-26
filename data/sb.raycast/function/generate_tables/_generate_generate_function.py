@@ -3,11 +3,14 @@ from pathlib import Path
 
 halves = ["top", "bottom"]
 dirs = ["north", "south", "east", "west"]
+vert_attach = ["ceiling", "floor"]
 subdirs = ["northwest", "southwest", "southeast", "northeast"]
 corners = ["inner", "outer"]
 panels = ["top", "bottom", "north", "south", "east", "west"]
-axes = ["x", "z"]
+about_y_axes = ["x", "z"]
+axes = ["x", "y", "z"]
 connection_types = ["none", "low", "tall"]
+activation = ["pressed", "unpressed"]
 
 # I'm going to allow certain "impossible" states for creative mode use
 def is_state_possible(up: bool, connects: dict[str, str]) -> bool:
@@ -37,6 +40,14 @@ for connects in (dict(zip(dirs, values)) for values in itertools.product([True, 
     prefix = f"{ident}_" if ident else ""
     tables.append(f"function sb.raycast:generate_tables/panes/{prefix}pane")
 
+tables.append("\n#chains")
+for axis in axes:
+    tables.append(f"function sb.raycast:generate_tables/chains/{axis}")
+
+tables.append("\n#rods")
+for axis in axes:
+    tables.append(f"function sb.raycast:generate_tables/rods/{axis}")
+
 tables.append("\n#panels")
 for panel in panels:
     tables.append(f"function sb.raycast:generate_tables/panels/{panel}")
@@ -53,8 +64,32 @@ for connects in (dict(zip(dirs, values)) for values in itertools.product([True, 
     tables.append(f"function sb.raycast:generate_tables/fences/{prefix}fence")
 
 tables.append("\n#anvils")
-for axis in axes:
+for axis in about_y_axes:
     tables.append(f"function sb.raycast:generate_tables/anvils/{axis}")
+
+tables.append("\n#signs")
+tables.append("function sb.raycast:generate_tables/signs/floor")
+for dir in dirs:
+    tables.append(f"function sb.raycast:generate_tables/signs/wall_{dir}")
+
+tables.append("\n#hanging_signs")
+tables.append("function sb.raycast:generate_tables/hanging_signs/ceiling_other")
+for axis in about_y_axes:
+    tables.append(f"function sb.raycast:generate_tables/hanging_signs/ceiling_{axis}")
+for axis in about_y_axes:
+    tables.append(f"function sb.raycast:generate_tables/hanging_signs/wall_{axis}")
+
+tables.append("\n#plates")
+for state in activation:
+    tables.append(f"function sb.raycast:generate_tables/plates/{state}")
+
+tables.append("\n#buttons")
+for state in activation:
+    for vert in vert_attach:
+        for axis in about_y_axes:
+            tables.append(f"function sb.raycast:generate_tables/buttons/{vert}_{axis}_{state}")
+    for dir in dirs:
+        tables.append(f"function sb.raycast:generate_tables/buttons/wall_{dir}_{state}")
 
 tables.append("\n#walls")
 for up in [True, False]:

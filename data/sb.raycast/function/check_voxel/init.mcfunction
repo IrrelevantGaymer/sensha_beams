@@ -49,6 +49,16 @@ execute positioned ~ ~ ~ if predicate sb.raycast:panes/east_pane run return run 
 execute positioned ~ ~ ~ if predicate sb.raycast:panes/west_pane run return run function sb.raycast:check_voxel/check_panes/west_pane
 execute positioned ~ ~ ~ if predicate sb.raycast:panes/pane run return run function sb.raycast:check_voxel/check_panes/pane
 
+#chains
+execute positioned ~ ~ ~ if predicate sb.raycast:chains/x run return run function sb.raycast:check_voxel/check_chains/x
+execute positioned ~ ~ ~ if predicate sb.raycast:chains/y run return run function sb.raycast:check_voxel/check_chains/y
+execute positioned ~ ~ ~ if predicate sb.raycast:chains/z run return run function sb.raycast:check_voxel/check_chains/z
+
+#rods
+execute positioned ~ ~ ~ if predicate sb.raycast:rods/x run return run function sb.raycast:check_voxel/check_rods/x
+execute positioned ~ ~ ~ if predicate sb.raycast:rods/y run return run function sb.raycast:check_voxel/check_rods/y
+execute positioned ~ ~ ~ if predicate sb.raycast:rods/z run return run function sb.raycast:check_voxel/check_rods/z
+
 #panels
 execute positioned ~ ~ ~ if predicate sb.raycast:panels/top run return run function sb.raycast:check_voxel/check_panels/top
 execute positioned ~ ~ ~ if predicate sb.raycast:panels/bottom run return run function sb.raycast:check_voxel/check_panels/bottom
@@ -81,6 +91,42 @@ execute positioned ~ ~ ~ if predicate sb.raycast:fences/fence run return run fun
 #anvils
 execute positioned ~ ~ ~ if predicate sb.raycast:anvils/x run return run function sb.raycast:check_voxel/check_anvils/x
 execute positioned ~ ~ ~ if predicate sb.raycast:anvils/z run return run function sb.raycast:check_voxel/check_anvils/z
+
+#signs
+execute positioned ~ ~ ~ if predicate sb.raycast:signs/floor run return run function sb.raycast:check_voxel/check_signs/floor
+execute positioned ~ ~ ~ if predicate sb.raycast:signs/wall_north run return run function sb.raycast:check_voxel/check_signs/wall_north
+execute positioned ~ ~ ~ if predicate sb.raycast:signs/wall_south run return run function sb.raycast:check_voxel/check_signs/wall_south
+execute positioned ~ ~ ~ if predicate sb.raycast:signs/wall_east run return run function sb.raycast:check_voxel/check_signs/wall_east
+execute positioned ~ ~ ~ if predicate sb.raycast:signs/wall_west run return run function sb.raycast:check_voxel/check_signs/wall_west
+
+#hanging_signs
+execute positioned ~ ~ ~ if predicate sb.raycast:hanging_signs/ceiling_other run return run function sb.raycast:check_voxel/check_hanging_signs/ceiling_other
+execute positioned ~ ~ ~ if predicate sb.raycast:hanging_signs/ceiling_x run return run function sb.raycast:check_voxel/check_hanging_signs/ceiling_x
+execute positioned ~ ~ ~ if predicate sb.raycast:hanging_signs/ceiling_z run return run function sb.raycast:check_voxel/check_hanging_signs/ceiling_z
+execute positioned ~ ~ ~ if predicate sb.raycast:hanging_signs/wall_x run return run function sb.raycast:check_voxel/check_hanging_signs/wall_x
+execute positioned ~ ~ ~ if predicate sb.raycast:hanging_signs/wall_z run return run function sb.raycast:check_voxel/check_hanging_signs/wall_z
+
+#plates
+execute positioned ~ ~ ~ if predicate sb.raycast:plates/pressed run return run function sb.raycast:check_voxel/check_plates/pressed
+execute positioned ~ ~ ~ if predicate sb.raycast:plates/unpressed run return run function sb.raycast:check_voxel/check_plates/unpressed
+
+#buttons
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/ceiling_x_pressed run return run function sb.raycast:check_voxel/check_buttons/ceiling_x_pressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/ceiling_z_pressed run return run function sb.raycast:check_voxel/check_buttons/ceiling_z_pressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/floor_x_pressed run return run function sb.raycast:check_voxel/check_buttons/floor_x_pressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/floor_z_pressed run return run function sb.raycast:check_voxel/check_buttons/floor_z_pressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_north_pressed run return run function sb.raycast:check_voxel/check_buttons/wall_north_pressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_south_pressed run return run function sb.raycast:check_voxel/check_buttons/wall_south_pressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_east_pressed run return run function sb.raycast:check_voxel/check_buttons/wall_east_pressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_west_pressed run return run function sb.raycast:check_voxel/check_buttons/wall_west_pressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/ceiling_x_unpressed run return run function sb.raycast:check_voxel/check_buttons/ceiling_x_unpressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/ceiling_z_unpressed run return run function sb.raycast:check_voxel/check_buttons/ceiling_z_unpressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/floor_x_unpressed run return run function sb.raycast:check_voxel/check_buttons/floor_x_unpressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/floor_z_unpressed run return run function sb.raycast:check_voxel/check_buttons/floor_z_unpressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_north_unpressed run return run function sb.raycast:check_voxel/check_buttons/wall_north_unpressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_south_unpressed run return run function sb.raycast:check_voxel/check_buttons/wall_south_unpressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_east_unpressed run return run function sb.raycast:check_voxel/check_buttons/wall_east_unpressed
+execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_west_unpressed run return run function sb.raycast:check_voxel/check_buttons/wall_west_unpressed
 
 #walls
 execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_wall run return run function sb.raycast:check_voxel/check_walls/up_wall
