@@ -5,11 +5,9 @@ connections = ["north", "south", "east", "west"]
 
 def generate_check(shape: str) -> str:
     return f'''\
-data modify storage sensha_beams:raycast partial.cuboids_to_check set from storage sensha_beams:raycast/table {shape}
+data modify storage sensha_beams:raycast partial.cuboids_to_check set from storage sensha_beams:raycast/table panes.{shape}
 
 execute \\
-    positioned ~ ~ ~ \\
-    if predicate sb.raycast:panes/{shape} \\
     if function sb.raycast:partial/run \\
     run return run function sb.raycast:check_voxel/store_raycast_result
 return 0

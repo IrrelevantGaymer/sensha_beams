@@ -1,51 +1,248 @@
-execute if function sb.raycast:check_voxel/check_full run return 1
+execute positioned ~ ~ ~ if block ~ ~ ~ #sb.raycast:passthrough run return 0
+execute positioned ~ ~ ~ if predicate sb.raycast:is_full_block run return run function sb.raycast:check_voxel/check_full
 
-# halves
-execute if function sb.raycast:check_voxel/check_halves/bottom_half run return 1
-execute if function sb.raycast:check_voxel/check_halves/top_half run return 1
+#halves
+execute positioned ~ ~ ~ if predicate sb.raycast:halves/bottom_half run return run function sb.raycast:check_voxel/check_halves/bottom_half
+execute positioned ~ ~ ~ if predicate sb.raycast:halves/bottom_half run return run function sb.raycast:check_voxel/check_halves/bottom_half
 
-# stairs
-execute if function sb.raycast:check_voxel/check_stairs/bottom_north run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_south run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_east run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_west run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_inner_northeast run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_inner_northwest run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_inner_southeast run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_inner_southwest run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_outer_northeast run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_outer_northwest run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_outer_southeast run return 1
-execute if function sb.raycast:check_voxel/check_stairs/bottom_outer_southwest run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_north run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_south run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_east run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_west run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_inner_northeast run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_inner_northwest run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_inner_southeast run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_inner_southwest run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_outer_northeast run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_outer_northwest run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_outer_southeast run return 1
-execute if function sb.raycast:check_voxel/check_stairs/top_outer_southwest run return 1
+#stairs
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_north run return run function sb.raycast:check_voxel/check_stairs/top_north
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_south run return run function sb.raycast:check_voxel/check_stairs/top_south
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_east run return run function sb.raycast:check_voxel/check_stairs/top_east
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_west run return run function sb.raycast:check_voxel/check_stairs/top_west
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_inner_northwest run return run function sb.raycast:check_voxel/check_stairs/top_inner_northwest
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_inner_southwest run return run function sb.raycast:check_voxel/check_stairs/top_inner_southwest
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_inner_southeast run return run function sb.raycast:check_voxel/check_stairs/top_inner_southeast
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_inner_northeast run return run function sb.raycast:check_voxel/check_stairs/top_inner_northeast
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_outer_northwest run return run function sb.raycast:check_voxel/check_stairs/top_outer_northwest
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_outer_southwest run return run function sb.raycast:check_voxel/check_stairs/top_outer_southwest
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_outer_southeast run return run function sb.raycast:check_voxel/check_stairs/top_outer_southeast
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/top_outer_northeast run return run function sb.raycast:check_voxel/check_stairs/top_outer_northeast
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_north run return run function sb.raycast:check_voxel/check_stairs/bottom_north
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_south run return run function sb.raycast:check_voxel/check_stairs/bottom_south
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_east run return run function sb.raycast:check_voxel/check_stairs/bottom_east
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_west run return run function sb.raycast:check_voxel/check_stairs/bottom_west
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_inner_northwest run return run function sb.raycast:check_voxel/check_stairs/bottom_inner_northwest
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_inner_southwest run return run function sb.raycast:check_voxel/check_stairs/bottom_inner_southwest
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_inner_southeast run return run function sb.raycast:check_voxel/check_stairs/bottom_inner_southeast
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_inner_northeast run return run function sb.raycast:check_voxel/check_stairs/bottom_inner_northeast
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_outer_northwest run return run function sb.raycast:check_voxel/check_stairs/bottom_outer_northwest
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_outer_southwest run return run function sb.raycast:check_voxel/check_stairs/bottom_outer_southwest
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_outer_southeast run return run function sb.raycast:check_voxel/check_stairs/bottom_outer_southeast
+execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_outer_northeast run return run function sb.raycast:check_voxel/check_stairs/bottom_outer_northeast
 
-# panes
-execute if function sb.raycast:check_voxel/check_panes/pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/north_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/south_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/east_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/west_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/north_south_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/east_west_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/north_east_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/north_west_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/south_east_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/south_west_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/north_south_east_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/north_south_west_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/north_east_west_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/south_east_west_pane run return 1
-execute if function sb.raycast:check_voxel/check_panes/all_pane run return 1
+#panes
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/all_pane run return run function sb.raycast:check_voxel/check_panes/all_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/north_south_east_pane run return run function sb.raycast:check_voxel/check_panes/north_south_east_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/north_south_west_pane run return run function sb.raycast:check_voxel/check_panes/north_south_west_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/north_south_pane run return run function sb.raycast:check_voxel/check_panes/north_south_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/north_east_west_pane run return run function sb.raycast:check_voxel/check_panes/north_east_west_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/north_east_pane run return run function sb.raycast:check_voxel/check_panes/north_east_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/north_west_pane run return run function sb.raycast:check_voxel/check_panes/north_west_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/north_pane run return run function sb.raycast:check_voxel/check_panes/north_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/south_east_west_pane run return run function sb.raycast:check_voxel/check_panes/south_east_west_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/south_east_pane run return run function sb.raycast:check_voxel/check_panes/south_east_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/south_west_pane run return run function sb.raycast:check_voxel/check_panes/south_west_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/south_pane run return run function sb.raycast:check_voxel/check_panes/south_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/east_west_pane run return run function sb.raycast:check_voxel/check_panes/east_west_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/east_pane run return run function sb.raycast:check_voxel/check_panes/east_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/west_pane run return run function sb.raycast:check_voxel/check_panes/west_pane
+execute positioned ~ ~ ~ if predicate sb.raycast:panes/pane run return run function sb.raycast:check_voxel/check_panes/pane
+
+#panels
+execute positioned ~ ~ ~ if predicate sb.raycast:panels/top run return run function sb.raycast:check_voxel/check_panels/top
+execute positioned ~ ~ ~ if predicate sb.raycast:panels/bottom run return run function sb.raycast:check_voxel/check_panels/bottom
+execute positioned ~ ~ ~ if predicate sb.raycast:panels/north run return run function sb.raycast:check_voxel/check_panels/north
+execute positioned ~ ~ ~ if predicate sb.raycast:panels/south run return run function sb.raycast:check_voxel/check_panels/south
+execute positioned ~ ~ ~ if predicate sb.raycast:panels/east run return run function sb.raycast:check_voxel/check_panels/east
+execute positioned ~ ~ ~ if predicate sb.raycast:panels/west run return run function sb.raycast:check_voxel/check_panels/west
+
+#carpets
+execute positioned ~ ~ ~ if block ~ ~ ~ #sb.raycast:carpets run return run function sb.raycast:check_voxel/check_carpets
+
+#fences
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/all_fence run return run function sb.raycast:check_voxel/check_fences/all_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/north_south_east_fence run return run function sb.raycast:check_voxel/check_fences/north_south_east_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/north_south_west_fence run return run function sb.raycast:check_voxel/check_fences/north_south_west_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/north_south_fence run return run function sb.raycast:check_voxel/check_fences/north_south_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/north_east_west_fence run return run function sb.raycast:check_voxel/check_fences/north_east_west_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/north_east_fence run return run function sb.raycast:check_voxel/check_fences/north_east_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/north_west_fence run return run function sb.raycast:check_voxel/check_fences/north_west_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/north_fence run return run function sb.raycast:check_voxel/check_fences/north_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/south_east_west_fence run return run function sb.raycast:check_voxel/check_fences/south_east_west_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/south_east_fence run return run function sb.raycast:check_voxel/check_fences/south_east_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/south_west_fence run return run function sb.raycast:check_voxel/check_fences/south_west_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/south_fence run return run function sb.raycast:check_voxel/check_fences/south_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/east_west_fence run return run function sb.raycast:check_voxel/check_fences/east_west_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/east_fence run return run function sb.raycast:check_voxel/check_fences/east_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/west_fence run return run function sb.raycast:check_voxel/check_fences/west_fence
+execute positioned ~ ~ ~ if predicate sb.raycast:fences/fence run return run function sb.raycast:check_voxel/check_fences/fence
+
+#anvils
+execute positioned ~ ~ ~ if predicate sb.raycast:anvils/x run return run function sb.raycast:check_voxel/check_anvils/x
+execute positioned ~ ~ ~ if predicate sb.raycast:anvils/z run return run function sb.raycast:check_voxel/check_anvils/z
+
+#walls
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_wall run return run function sb.raycast:check_voxel/check_walls/up_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_east_low_wall run return run function sb.raycast:check_voxel/check_walls/up_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_low_wall run return run function sb.raycast:check_voxel/check_walls/up_south_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_south_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_south_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_low_east_low_wall run return run function sb.raycast:check_voxel/check_walls/up_south_low_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_low_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_south_low_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_low_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_south_low_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_low_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_south_low_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_low_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_south_low_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_low_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_south_low_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_south_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_south_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_south_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_tall_east_low_wall run return run function sb.raycast:check_voxel/check_walls/up_south_tall_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_tall_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_south_tall_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_tall_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_south_tall_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_tall_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_south_tall_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_tall_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_south_tall_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_south_tall_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_south_tall_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_east_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_low_east_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_low_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_all_low_wall run return run function sb.raycast:check_voxel/check_walls/up_all_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_low_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_low_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_low_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_low_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_low_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_low_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_low_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_low_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_tall_east_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_tall_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_tall_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_tall_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_tall_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_tall_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_tall_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_tall_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_tall_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_tall_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_low_south_tall_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_low_south_tall_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_east_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_low_east_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_low_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_low_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_low_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_low_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_low_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_low_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_low_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_low_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_low_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_low_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_low_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_tall_east_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_tall_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_tall_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_tall_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_tall_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_tall_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_tall_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_tall_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_north_tall_south_tall_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_north_tall_south_tall_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_all_tall_wall run return run function sb.raycast:check_voxel/check_walls/up_all_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/west_low_wall run return run function sb.raycast:check_voxel/check_walls/west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/west_tall_wall run return run function sb.raycast:check_voxel/check_walls/west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/east_low_wall run return run function sb.raycast:check_voxel/check_walls/east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/east_tall_wall run return run function sb.raycast:check_voxel/check_walls/east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_low_wall run return run function sb.raycast:check_voxel/check_walls/south_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/south_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/south_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_low_east_low_wall run return run function sb.raycast:check_voxel/check_walls/south_low_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_low_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/south_low_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_low_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/south_low_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_low_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/south_low_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_low_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/south_low_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_low_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/south_low_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_tall_wall run return run function sb.raycast:check_voxel/check_walls/south_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/south_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/south_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_tall_east_low_wall run return run function sb.raycast:check_voxel/check_walls/south_tall_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_tall_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/south_tall_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_tall_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/south_tall_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_tall_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/south_tall_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_tall_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/south_tall_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/south_tall_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/south_tall_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_east_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_low_east_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_low_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/all_low_wall run return run function sb.raycast:check_voxel/check_walls/all_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_low_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_low_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_low_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_low_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_low_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_low_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_low_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_low_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_tall_east_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_tall_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_tall_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_tall_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_tall_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_tall_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_tall_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_tall_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_tall_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_tall_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_low_south_tall_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_low_south_tall_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_east_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_low_east_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_low_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_low_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_low_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_low_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_low_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_low_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_low_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_low_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_low_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_low_east_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_low_east_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_tall_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_tall_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_tall_east_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_tall_east_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_tall_east_low_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_tall_east_low_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_tall_east_low_west_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_tall_east_low_west_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_tall_east_tall_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_tall_east_tall_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/north_tall_south_tall_east_tall_west_low_wall run return run function sb.raycast:check_voxel/check_walls/north_tall_south_tall_east_tall_west_low_wall
+execute positioned ~ ~ ~ if predicate sb.raycast:walls/all_tall_wall run return run function sb.raycast:check_voxel/check_walls/all_tall_wall
 
 return 0

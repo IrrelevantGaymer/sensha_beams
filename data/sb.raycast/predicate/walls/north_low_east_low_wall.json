@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "blocks": "#minecraft:walls",
+          "state": {
+            "up": "false",
+            "north": "low",
+            "south": "none",
+            "east": "low",
+            "west": "none"
+          }
+        }
+      }
+    }
+  ]
+}

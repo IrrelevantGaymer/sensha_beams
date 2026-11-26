@@ -8,9 +8,5 @@
 #     ")" \
 # ]
 
-execute \
-    positioned ~ ~ ~ \
-    unless block ~ ~ ~ #sb.raycast:passthrough \
-    if predicate sb.raycast:is_full_block \
-    run return run function sb.raycast:check_voxel/store_raycast_result
-return 0
+function sb.raycast:check_voxel/store_raycast_result
+return 1

@@ -8,7 +8,7 @@ dirs = ["neg", "pos"]
 
 def generate_no_connect() -> str:
     return '''\
-data modify storage sensha_beams:raycast/table pane set value \\
+data modify storage sensha_beams:raycast/table panes.pane set value \\
     [ \\
         {min: {x: 0.4375, y: 0.0, z: 0.4375}, max: {x: 0.5625, y: 1.0, z: 0.5625}} \\
     ]
@@ -23,7 +23,7 @@ def generate_one_connect(label: str, connect: str) -> str:
     }
 
     return f'''\
-data modify storage sensha_beams:raycast/table {label} set value \\
+data modify storage sensha_beams:raycast/table panes.{label} set value \\
     [ \\
         {bounds[connect]} \\
     ]
@@ -36,7 +36,7 @@ def generate_two_connects_on_axis(label: str, axis: str) -> str:
     }
 
     return f'''\
-data modify storage sensha_beams:raycast/table {label} set value \\
+data modify storage sensha_beams:raycast/table panes.{label} set value \\
     [ \\
         {bounds[axis]} \\
     ]
@@ -52,7 +52,7 @@ def generate_two_connects_perp(label: str, x_connect: str, z_connect: str) -> st
         "south": "{min: {x: 0.4375, y: 0.0, z: 0.4375}, max: {x: 0.5625, y: 1.0, z: 1.0}}",
     }
     return f'''\
-data modify storage sensha_beams:raycast/table {label} set value \\
+data modify storage sensha_beams:raycast/table panes.{label} set value \\
     [ \\
         {x_bounds[x_connect]}, \\
         {z_bounds[z_connect]}, \\
@@ -73,7 +73,7 @@ def generate_three_connects(label: str, main_axis: str, off_axis_dir: str) -> st
         "z": f"{{min: {{x: {dir_offset[off_axis_dir]["min"]}, y: 0.0, z: 0.4375}}, max: {{x: {dir_offset[off_axis_dir]["max"]}, y: 1.0, z: 0.5625}}}}",
     }
     return f'''\
-data modify storage sensha_beams:raycast/table {label} set value \\
+data modify storage sensha_beams:raycast/table panes.{label} set value \\
     [ \\
         {main_bounds[main_axis]}, \\
         {off_bounds[main_axis]}, \\
@@ -82,7 +82,7 @@ data modify storage sensha_beams:raycast/table {label} set value \\
 
 def generate_all_connect(label: str) -> str:
     return f'''\
-data modify storage sensha_beams:raycast/table {label} set value \\
+data modify storage sensha_beams:raycast/table panes.{label} set value \\
     [ \\
         {{min: {{x: 0.0, y: 0.0, z: 0.4375}}, max: {{x: 1.0, y: 1.0, z: 0.5625}}}}, \\
         {{min: {{x: 0.4375, y: 0.0, z: 0.0}}, max: {{x: 0.5625, y: 1.0, z: 1.0}}}}, \\

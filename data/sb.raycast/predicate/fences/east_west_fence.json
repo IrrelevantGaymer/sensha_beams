@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "blocks": "#minecraft:fences",
+          "state": {
+            "north": "false",
+            "south": "false",
+            "east": "true",
+            "west": "true"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "blocks": "#minecraft:fence_gates",
+          "state": {
+            "facing": "north"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "blocks": "#minecraft:fence_gates",
+          "state": {
+            "facing": "south"
+          }
+        }
+      }
+    }
+  ]
+}

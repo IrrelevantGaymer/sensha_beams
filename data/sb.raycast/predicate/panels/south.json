@@ -1,0 +1,55 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "blocks": "#minecraft:trapdoors",
+          "state": {
+            "facing": "south",
+            "open": "true"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "blocks": "#minecraft:doors",
+          "state": {
+            "facing": "south",
+            "open": "false"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "blocks": "#minecraft:doors",
+          "state": {
+            "facing": "east",
+            "hinge": "left",
+            "open": "true"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "blocks": "#minecraft:doors",
+          "state": {
+            "facing": "west",
+            "hinge": "right",
+            "open": "true"
+          }
+        }
+      }
+    }
+  ]
+}

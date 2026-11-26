@@ -3,6 +3,13 @@
         "#minecraft:slabs",
         "#minecraft:stairs",
         "#sb.raycast:panes",
-        "minecraft:snow"
+        "minecraft:snow",
+        "#minecraft:doors",
+        "#minecraft:trapdoors",
+        "#sb.raycast:carpets",
+        "#minecraft:fence_gates",
+        "#minecraft:fences",
+        "#minecraft:anvil",
+        "#minecraft:walls"
     ]
 }

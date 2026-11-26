@@ -74,7 +74,7 @@ def generate_straight(dir: str, half: str) -> str:
         "}"
     )
     return f'''\
-data modify storage sensha_beams:raycast/table {half}_{dir} set value \\
+data modify storage sensha_beams:raycast/table stairs.{half}_{dir} set value \\
     [ \\
         {base_cuboid}, \\
         {step_cuboid}, \\
@@ -113,7 +113,7 @@ def generate_outer_corner(subdir: str, half: str) -> str:
         "}"
     )
     return f'''\
-data modify storage sensha_beams:raycast/table {half}_outer_{subdir} set value \\
+data modify storage sensha_beams:raycast/table stairs.{half}_outer_{subdir} set value \\
     [ \\
         {base_cuboid}, \\
         {step_cuboid}, \\
@@ -166,7 +166,7 @@ def generate_inner_corner(subdir: str, half: str) -> str:
         "}"
     )
     return f'''\
-data modify storage sensha_beams:raycast/table {half}_inner_{subdir} set value \\
+data modify storage sensha_beams:raycast/table stairs.{half}_inner_{subdir} set value \\
     [ \\
         {base_cuboid}, \\
         {x_step_cuboid}, \\
