@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:location_check",
+    "predicate": {
+        "block": {
+            "blocks": "#sb.raycast:carpets"
+        }
+    }
+}

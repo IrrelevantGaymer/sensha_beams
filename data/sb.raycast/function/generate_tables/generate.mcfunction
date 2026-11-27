@@ -28,6 +28,18 @@ function sb.raycast:generate_tables/stairs/bottom_outer_southwest
 function sb.raycast:generate_tables/stairs/bottom_outer_southeast
 function sb.raycast:generate_tables/stairs/bottom_outer_northeast
 
+#campfire
+function sb.raycast:generate_tables/campfire
+
+#stonecutter
+function sb.raycast:generate_tables/stonecutter
+
+#beds
+function sb.raycast:generate_tables/beds/north
+function sb.raycast:generate_tables/beds/south
+function sb.raycast:generate_tables/beds/east
+function sb.raycast:generate_tables/beds/west
+
 #panes
 function sb.raycast:generate_tables/panes/all_pane
 function sb.raycast:generate_tables/panes/north_south_east_pane

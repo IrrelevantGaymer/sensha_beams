@@ -19,6 +19,9 @@
         "minecraft:end_rod",
         "#minecraft:lightning_rods",
         "#sb.raycast:skulls",
-        "#sb.raycast:amethyst"
+        "#sb.raycast:amethyst",
+        "#minecraft:beds",
+        "#minecraft:campfires",
+        "minecraft:stonecutter"
     ]
 }

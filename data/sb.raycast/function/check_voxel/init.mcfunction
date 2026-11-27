@@ -31,6 +31,18 @@ execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_outer_southwest r
 execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_outer_southeast run return run function sb.raycast:check_voxel/check_stairs/bottom_outer_southeast
 execute positioned ~ ~ ~ if predicate sb.raycast:stairs/bottom_outer_northeast run return run function sb.raycast:check_voxel/check_stairs/bottom_outer_northeast
 
+#campfire
+execute positioned ~ ~ ~ if predicate sb.raycast:campfires run return run function sb.raycast:check_voxel/check_campfires
+
+#stonecutter
+execute positioned ~ ~ ~ if predicate sb.raycast:stonecutter run return run function sb.raycast:check_voxel/check_stonecutter
+
+#beds
+execute positioned ~ ~ ~ if predicate sb.raycast:beds/north run return run function sb.raycast:check_voxel/check_beds/north
+execute positioned ~ ~ ~ if predicate sb.raycast:beds/south run return run function sb.raycast:check_voxel/check_beds/south
+execute positioned ~ ~ ~ if predicate sb.raycast:beds/east run return run function sb.raycast:check_voxel/check_beds/east
+execute positioned ~ ~ ~ if predicate sb.raycast:beds/west run return run function sb.raycast:check_voxel/check_beds/west
+
 #panes
 execute positioned ~ ~ ~ if predicate sb.raycast:panes/all_pane run return run function sb.raycast:check_voxel/check_panes/all_pane
 execute positioned ~ ~ ~ if predicate sb.raycast:panes/north_south_east_pane run return run function sb.raycast:check_voxel/check_panes/north_south_east_pane
@@ -68,7 +80,7 @@ execute positioned ~ ~ ~ if predicate sb.raycast:panels/east run return run func
 execute positioned ~ ~ ~ if predicate sb.raycast:panels/west run return run function sb.raycast:check_voxel/check_panels/west
 
 #carpets
-execute positioned ~ ~ ~ if block ~ ~ ~ #sb.raycast:carpets run return run function sb.raycast:check_voxel/check_carpets
+execute positioned ~ ~ ~ if predicate sb.raycast:carpets run return run function sb.raycast:check_voxel/check_carpets
 
 #fences
 execute positioned ~ ~ ~ if predicate sb.raycast:fences/all_fence run return run function sb.raycast:check_voxel/check_fences/all_fence

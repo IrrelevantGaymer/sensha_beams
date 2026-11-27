@@ -43,6 +43,16 @@ for half in halves:
             shape = f"{half}_{corner}_{subdir}"
             commands.append(check_command(f"stairs/{shape}", f"check_stairs/{shape}"))
 
+commands.append("\n#campfire")
+commands.append(check_command("campfires", "check_campfires"))
+
+commands.append("\n#stonecutter")
+commands.append(check_command("stonecutter", "check_stonecutter"))
+
+commands.append("\n#beds")
+for dir in dirs:
+    commands.append(check_command(f"beds/{dir}", f"check_beds/{dir}"))
+
 commands.append("\n#panes")
 for connects in (dict(zip(dirs, values)) for values in itertools.product([True, False], repeat=4)):
     ident = "all" \
@@ -65,7 +75,7 @@ for panel in panels:
     commands.append(check_command(f"panels/{panel}", f"check_panels/{panel}"))
 
 commands.append("\n#carpets")
-commands.append("execute positioned ~ ~ ~ if block ~ ~ ~ #sb.raycast:carpets run return run function sb.raycast:check_voxel/check_carpets")
+commands.append(check_command(f"carpets", f"check_carpets"))
 
 commands.append("\n#fences")
 for connects in (dict(zip(dirs, values)) for values in itertools.product([True, False], repeat=4)):

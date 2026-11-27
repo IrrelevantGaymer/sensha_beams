@@ -35,6 +35,16 @@ for half in halves:
         for subdir in subdirs:
             tables.append(f"function sb.raycast:generate_tables/stairs/{half}_{corner}_{subdir}")
 
+tables.append("\n#campfire")
+tables.append("function sb.raycast:generate_tables/campfire")
+
+tables.append("\n#stonecutter")
+tables.append("function sb.raycast:generate_tables/stonecutter")
+
+tables.append("\n#beds")
+for dir in dirs:
+    tables.append(f"function sb.raycast:generate_tables/beds/{dir}")
+
 tables.append("\n#panes")
 for connects in (dict(zip(dirs, values)) for values in itertools.product([True, False], repeat=4)):
     ident = "all" \
