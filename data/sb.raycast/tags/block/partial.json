@@ -17,6 +17,7 @@
         "#minecraft:pressure_plates",
         "#minecraft:buttons",
         "minecraft:end_rod",
+        "#minecraft:lightning_rods",
         "#sb.raycast:skulls",
         "#sb.raycast:amethyst"
     ]

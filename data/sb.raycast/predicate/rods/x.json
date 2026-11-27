@@ -22,6 +22,28 @@
                     }
                 }
             }
+        },
+        {
+            "type": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:lightning_rods",
+                    "state": {
+                        "facing": "east"
+                    }
+                }
+            }
+        },
+        {
+            "type": "minecraft:location_check",
+            "predicate": {
+                "block": {
+                    "blocks": "#minecraft:lightning_rods",
+                    "state": {
+                        "facing": "west"
+                    }
+                }
+            }
         }
     ]
 }
