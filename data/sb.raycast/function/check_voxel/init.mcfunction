@@ -128,6 +128,44 @@ execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_south_unpressed ru
 execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_east_unpressed run return run function sb.raycast:check_voxel/check_buttons/wall_east_unpressed
 execute positioned ~ ~ ~ if predicate sb.raycast:buttons/wall_west_unpressed run return run function sb.raycast:check_voxel/check_buttons/wall_west_unpressed
 
+#heads
+execute positioned ~ ~ ~ if predicate sb.raycast:heads/floor_normal run return run function sb.raycast:check_voxel/check_heads/floor_normal
+execute positioned ~ ~ ~ if predicate sb.raycast:heads/wall_normal_north run return run function sb.raycast:check_voxel/check_heads/wall_normal_north
+execute positioned ~ ~ ~ if predicate sb.raycast:heads/wall_normal_south run return run function sb.raycast:check_voxel/check_heads/wall_normal_south
+execute positioned ~ ~ ~ if predicate sb.raycast:heads/wall_normal_east run return run function sb.raycast:check_voxel/check_heads/wall_normal_east
+execute positioned ~ ~ ~ if predicate sb.raycast:heads/wall_normal_west run return run function sb.raycast:check_voxel/check_heads/wall_normal_west
+execute positioned ~ ~ ~ if predicate sb.raycast:heads/floor_piglin run return run function sb.raycast:check_voxel/check_heads/floor_piglin
+execute positioned ~ ~ ~ if predicate sb.raycast:heads/wall_piglin_north run return run function sb.raycast:check_voxel/check_heads/wall_piglin_north
+execute positioned ~ ~ ~ if predicate sb.raycast:heads/wall_piglin_south run return run function sb.raycast:check_voxel/check_heads/wall_piglin_south
+execute positioned ~ ~ ~ if predicate sb.raycast:heads/wall_piglin_east run return run function sb.raycast:check_voxel/check_heads/wall_piglin_east
+execute positioned ~ ~ ~ if predicate sb.raycast:heads/wall_piglin_west run return run function sb.raycast:check_voxel/check_heads/wall_piglin_west
+
+#amethyst
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/small_up run return run function sb.raycast:check_voxel/check_amethyst/small_up
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/small_down run return run function sb.raycast:check_voxel/check_amethyst/small_down
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/small_north run return run function sb.raycast:check_voxel/check_amethyst/small_north
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/small_south run return run function sb.raycast:check_voxel/check_amethyst/small_south
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/small_east run return run function sb.raycast:check_voxel/check_amethyst/small_east
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/small_west run return run function sb.raycast:check_voxel/check_amethyst/small_west
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/med_up run return run function sb.raycast:check_voxel/check_amethyst/med_up
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/med_down run return run function sb.raycast:check_voxel/check_amethyst/med_down
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/med_north run return run function sb.raycast:check_voxel/check_amethyst/med_north
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/med_south run return run function sb.raycast:check_voxel/check_amethyst/med_south
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/med_east run return run function sb.raycast:check_voxel/check_amethyst/med_east
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/med_west run return run function sb.raycast:check_voxel/check_amethyst/med_west
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/large_up run return run function sb.raycast:check_voxel/check_amethyst/large_up
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/large_down run return run function sb.raycast:check_voxel/check_amethyst/large_down
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/large_north run return run function sb.raycast:check_voxel/check_amethyst/large_north
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/large_south run return run function sb.raycast:check_voxel/check_amethyst/large_south
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/large_east run return run function sb.raycast:check_voxel/check_amethyst/large_east
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/large_west run return run function sb.raycast:check_voxel/check_amethyst/large_west
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/full_up run return run function sb.raycast:check_voxel/check_amethyst/full_up
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/full_down run return run function sb.raycast:check_voxel/check_amethyst/full_down
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/full_north run return run function sb.raycast:check_voxel/check_amethyst/full_north
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/full_south run return run function sb.raycast:check_voxel/check_amethyst/full_south
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/full_east run return run function sb.raycast:check_voxel/check_amethyst/full_east
+execute positioned ~ ~ ~ if predicate sb.raycast:amethyst/full_west run return run function sb.raycast:check_voxel/check_amethyst/full_west
+
 #walls
 execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_wall run return run function sb.raycast:check_voxel/check_walls/up_wall
 execute positioned ~ ~ ~ if predicate sb.raycast:walls/up_west_low_wall run return run function sb.raycast:check_voxel/check_walls/up_west_low_wall

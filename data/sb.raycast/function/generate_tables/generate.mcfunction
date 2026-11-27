@@ -125,6 +125,44 @@ function sb.raycast:generate_tables/buttons/wall_south_unpressed
 function sb.raycast:generate_tables/buttons/wall_east_unpressed
 function sb.raycast:generate_tables/buttons/wall_west_unpressed
 
+#heads
+function sb.raycast:generate_tables/heads/floor_normal
+function sb.raycast:generate_tables/heads/wall_normal_north
+function sb.raycast:generate_tables/heads/wall_normal_south
+function sb.raycast:generate_tables/heads/wall_normal_east
+function sb.raycast:generate_tables/heads/wall_normal_west
+function sb.raycast:generate_tables/heads/floor_piglin
+function sb.raycast:generate_tables/heads/wall_piglin_north
+function sb.raycast:generate_tables/heads/wall_piglin_south
+function sb.raycast:generate_tables/heads/wall_piglin_east
+function sb.raycast:generate_tables/heads/wall_piglin_west
+
+#amethyst
+function sb.raycast:generate_tables/amethyst/small_up
+function sb.raycast:generate_tables/amethyst/small_down
+function sb.raycast:generate_tables/amethyst/small_north
+function sb.raycast:generate_tables/amethyst/small_south
+function sb.raycast:generate_tables/amethyst/small_east
+function sb.raycast:generate_tables/amethyst/small_west
+function sb.raycast:generate_tables/amethyst/med_up
+function sb.raycast:generate_tables/amethyst/med_down
+function sb.raycast:generate_tables/amethyst/med_north
+function sb.raycast:generate_tables/amethyst/med_south
+function sb.raycast:generate_tables/amethyst/med_east
+function sb.raycast:generate_tables/amethyst/med_west
+function sb.raycast:generate_tables/amethyst/large_up
+function sb.raycast:generate_tables/amethyst/large_down
+function sb.raycast:generate_tables/amethyst/large_north
+function sb.raycast:generate_tables/amethyst/large_south
+function sb.raycast:generate_tables/amethyst/large_east
+function sb.raycast:generate_tables/amethyst/large_west
+function sb.raycast:generate_tables/amethyst/full_up
+function sb.raycast:generate_tables/amethyst/full_down
+function sb.raycast:generate_tables/amethyst/full_north
+function sb.raycast:generate_tables/amethyst/full_south
+function sb.raycast:generate_tables/amethyst/full_east
+function sb.raycast:generate_tables/amethyst/full_west
+
 #walls
 function sb.raycast:generate_tables/walls/up_wall
 function sb.raycast:generate_tables/walls/up_west_low_wall

@@ -3,6 +3,7 @@ from pathlib import Path
 
 halves = ["top", "bottom"]
 dirs = ["north", "south", "east", "west"]
+facing = ["up", "down", "north", "south", "east", "west"]
 vert_attach = ["ceiling", "floor"]
 subdirs = ["northwest", "southwest", "southeast", "northeast"]
 corners = ["inner", "outer"]
@@ -11,6 +12,8 @@ about_y_axes = ["x", "z"]
 axes = ["x", "y", "z"]
 connection_types = ["none", "low", "tall"]
 activation = ["pressed", "unpressed"]
+amethyst = ["small", "med", "large", "full"]
+heads = ["normal", "piglin"]
 
 # I'm going to allow certain "impossible" states for creative mode use
 def is_state_possible(up: bool, connects: dict[str, str]) -> bool:
@@ -100,6 +103,19 @@ for state in activation:
             commands.append(check_command(f"buttons/{vert}_{axis}_{state}", f"check_buttons/{vert}_{axis}_{state}"))
     for dir in dirs:
         commands.append(check_command(f"buttons/wall_{dir}_{state}", f"check_buttons/wall_{dir}_{state}"))
+
+commands.append("\n#heads")
+commands.append(check_command("heads/floor_normal", "check_heads/floor_normal"))
+for dir in dirs:
+    commands.append(check_command(f"heads/wall_normal_{dir}", f"check_heads/wall_normal_{dir}"))
+commands.append(check_command("heads/floor_piglin", "check_heads/floor_piglin"))
+for dir in dirs:
+    commands.append(check_command(f"heads/wall_piglin_{dir}", f"check_heads/wall_piglin_{dir}"))
+
+commands.append("\n#amethyst")
+for gem in amethyst:
+    for face in facing:
+        commands.append(check_command(f"amethyst/{gem}_{face}", f"check_amethyst/{gem}_{face}"))
 
 commands.append("\n#walls")
 for up in [True, False]:

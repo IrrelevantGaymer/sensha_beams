@@ -16,6 +16,8 @@
         "#minecraft:all_hanging_signs",
         "#minecraft:pressure_plates",
         "#minecraft:buttons",
-        "minecraft:end_rod"
+        "minecraft:end_rod",
+        "#sb.raycast:skulls",
+        "#sb.raycast:amethyst"
     ]
 }

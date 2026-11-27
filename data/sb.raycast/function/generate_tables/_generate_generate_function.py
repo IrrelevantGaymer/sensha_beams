@@ -3,6 +3,7 @@ from pathlib import Path
 
 halves = ["top", "bottom"]
 dirs = ["north", "south", "east", "west"]
+facing = ["up", "down", "north", "south", "east", "west"]
 vert_attach = ["ceiling", "floor"]
 subdirs = ["northwest", "southwest", "southeast", "northeast"]
 corners = ["inner", "outer"]
@@ -11,9 +12,11 @@ about_y_axes = ["x", "z"]
 axes = ["x", "y", "z"]
 connection_types = ["none", "low", "tall"]
 activation = ["pressed", "unpressed"]
+amethyst = ["small", "med", "large", "full"]
+heads = ["normal", "piglin"]
 
 # I'm going to allow certain "impossible" states for creative mode use
-def is_state_possible(up: bool, connects: dict[str, str]) -> bool:
+def is_wall_state_possible(up: bool, connects: dict[str, str]) -> bool:
     if not up and connects["north"] == "none" and connects["south"] == "none" and connects["west"] == "none" and connects["east"] == "none":
         return False
     return True
@@ -91,10 +94,23 @@ for state in activation:
     for dir in dirs:
         tables.append(f"function sb.raycast:generate_tables/buttons/wall_{dir}_{state}")
 
+tables.append("\n#heads")
+tables.append("function sb.raycast:generate_tables/heads/floor_normal")
+for dir in dirs:
+    tables.append(f"function sb.raycast:generate_tables/heads/wall_normal_{dir}")
+tables.append("function sb.raycast:generate_tables/heads/floor_piglin")
+for dir in dirs:
+    tables.append(f"function sb.raycast:generate_tables/heads/wall_piglin_{dir}")
+
+tables.append("\n#amethyst")
+for gem in amethyst:
+    for face in facing:
+        tables.append(f"function sb.raycast:generate_tables/amethyst/{gem}_{face}")
+
 tables.append("\n#walls")
 for up in [True, False]:
     for connects in (dict(zip(dirs, values)) for values in itertools.product(connection_types, repeat=4)):
-        if not is_state_possible(up, connects):
+        if not is_wall_state_possible(up, connects):
             continue
         up_prefix = "up_" if up else ""
         ident = "all_low" if connects == {"north": "low", "south": "low", "east": "low", "west": "low"} \
