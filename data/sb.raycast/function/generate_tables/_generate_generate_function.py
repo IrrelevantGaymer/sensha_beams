@@ -41,9 +41,27 @@ tables.append("function sb.raycast:generate_tables/campfire")
 tables.append("\n#stonecutter")
 tables.append("function sb.raycast:generate_tables/stonecutter")
 
+tables.append("\n#brewing_stand")
+tables.append("function sb.raycast:generate_tables/brewing_stand")
+
+tables.append("\n#cauldron")
+tables.append("function sb.raycast:generate_tables/cauldron")
+
+tables.append("\n#enchanting_table")
+tables.append("function sb.raycast:generate_tables/enchanting_table")
+
 tables.append("\n#beds")
 for dir in dirs:
     tables.append(f"function sb.raycast:generate_tables/beds/{dir}")
+
+tables.append("\n#torches")
+tables.append("function sb.raycast:generate_tables/torches/floor")
+for dir in dirs:
+    tables.append(f"function sb.raycast:generate_tables/torches/wall_{dir}")
+
+tables.append("\n#lanterns")
+for vert in vert_attach:
+    tables.append(f"function sb.raycast:generate_tables/lanterns/{vert}")
 
 tables.append("\n#panes")
 for connects in (dict(zip(dirs, values)) for values in itertools.product([True, False], repeat=4)):

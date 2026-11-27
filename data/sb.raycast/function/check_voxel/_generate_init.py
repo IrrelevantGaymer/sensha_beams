@@ -49,9 +49,27 @@ commands.append(check_command("campfires", "check_campfires"))
 commands.append("\n#stonecutter")
 commands.append(check_command("stonecutter", "check_stonecutter"))
 
+commands.append("\n#brewing_stand")
+commands.append(check_command("brewing_stand", "check_brewing_stand"))
+
+commands.append("\n#cauldron")
+commands.append(check_command("cauldrons", "check_cauldron"))
+
+commands.append("\n#enchanting_table")
+commands.append(check_command("enchanting_table", "check_enchanting_table"))
+
 commands.append("\n#beds")
 for dir in dirs:
     commands.append(check_command(f"beds/{dir}", f"check_beds/{dir}"))
+
+commands.append("\n#torches")
+commands.append(check_command("torches/floor", "check_torches/floor"))
+for dir in dirs:
+    commands.append(check_command(f"torches/wall_{dir}", f"check_torches/wall_{dir}"))
+
+commands.append("\n#lanterns")
+for vert in vert_attach:
+    commands.append(check_command(f"lanterns/{vert}", f"check_lanterns/{vert}"))
 
 commands.append("\n#panes")
 for connects in (dict(zip(dirs, values)) for values in itertools.product([True, False], repeat=4)):

@@ -34,11 +34,31 @@ function sb.raycast:generate_tables/campfire
 #stonecutter
 function sb.raycast:generate_tables/stonecutter
 
+#brewing_stand
+function sb.raycast:generate_tables/brewing_stand
+
+#cauldron
+function sb.raycast:generate_tables/cauldron
+
+#enchanting_table
+function sb.raycast:generate_tables/enchanting_table
+
 #beds
 function sb.raycast:generate_tables/beds/north
 function sb.raycast:generate_tables/beds/south
 function sb.raycast:generate_tables/beds/east
 function sb.raycast:generate_tables/beds/west
+
+#torches
+function sb.raycast:generate_tables/torches/floor
+function sb.raycast:generate_tables/torches/wall_north
+function sb.raycast:generate_tables/torches/wall_south
+function sb.raycast:generate_tables/torches/wall_east
+function sb.raycast:generate_tables/torches/wall_west
+
+#lanterns
+function sb.raycast:generate_tables/lanterns/ceiling
+function sb.raycast:generate_tables/lanterns/floor
 
 #panes
 function sb.raycast:generate_tables/panes/all_pane

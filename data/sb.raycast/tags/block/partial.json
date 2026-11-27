@@ -22,6 +22,12 @@
         "#sb.raycast:amethyst",
         "#minecraft:beds",
         "#minecraft:campfires",
-        "minecraft:stonecutter"
+        "minecraft:stonecutter",
+        "#sb.raycast:torches/floor",
+        "#sb.raycast:torches/wall",
+        "#minecraft:lanterns",
+        "minecraft:brewing_stand",
+        "#minecraft:cauldrons",
+        "minecraft:enchanting_table"
     ]
 }

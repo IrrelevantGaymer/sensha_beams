@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:location_check",
+    "predicate": {
+        "block": {
+            "blocks": "#sb.raycast:torches/wall",
+            "state": {
+                "facing": "south"
+            }
+        }
+    }
+}

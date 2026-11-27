@@ -37,11 +37,31 @@ execute positioned ~ ~ ~ if predicate sb.raycast:campfires run return run functi
 #stonecutter
 execute positioned ~ ~ ~ if predicate sb.raycast:stonecutter run return run function sb.raycast:check_voxel/check_stonecutter
 
+#brewing_stand
+execute positioned ~ ~ ~ if predicate sb.raycast:brewing_stand run return run function sb.raycast:check_voxel/check_brewing_stand
+
+#cauldron
+execute positioned ~ ~ ~ if predicate sb.raycast:cauldrons run return run function sb.raycast:check_voxel/check_cauldron
+
+#enchanting_table
+execute positioned ~ ~ ~ if predicate sb.raycast:enchanting_table run return run function sb.raycast:check_voxel/check_enchanting_table
+
 #beds
 execute positioned ~ ~ ~ if predicate sb.raycast:beds/north run return run function sb.raycast:check_voxel/check_beds/north
 execute positioned ~ ~ ~ if predicate sb.raycast:beds/south run return run function sb.raycast:check_voxel/check_beds/south
 execute positioned ~ ~ ~ if predicate sb.raycast:beds/east run return run function sb.raycast:check_voxel/check_beds/east
 execute positioned ~ ~ ~ if predicate sb.raycast:beds/west run return run function sb.raycast:check_voxel/check_beds/west
+
+#torches
+execute positioned ~ ~ ~ if predicate sb.raycast:torches/floor run return run function sb.raycast:check_voxel/check_torches/floor
+execute positioned ~ ~ ~ if predicate sb.raycast:torches/wall_north run return run function sb.raycast:check_voxel/check_torches/wall_north
+execute positioned ~ ~ ~ if predicate sb.raycast:torches/wall_south run return run function sb.raycast:check_voxel/check_torches/wall_south
+execute positioned ~ ~ ~ if predicate sb.raycast:torches/wall_east run return run function sb.raycast:check_voxel/check_torches/wall_east
+execute positioned ~ ~ ~ if predicate sb.raycast:torches/wall_west run return run function sb.raycast:check_voxel/check_torches/wall_west
+
+#lanterns
+execute positioned ~ ~ ~ if predicate sb.raycast:lanterns/ceiling run return run function sb.raycast:check_voxel/check_lanterns/ceiling
+execute positioned ~ ~ ~ if predicate sb.raycast:lanterns/floor run return run function sb.raycast:check_voxel/check_lanterns/floor
 
 #panes
 execute positioned ~ ~ ~ if predicate sb.raycast:panes/all_pane run return run function sb.raycast:check_voxel/check_panes/all_pane
