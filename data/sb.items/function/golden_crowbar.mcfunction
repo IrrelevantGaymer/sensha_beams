@@ -1,0 +1,1 @@
+loot give @s loot sb.items:golden_crowbar

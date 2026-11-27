@@ -13,19 +13,31 @@ pattern_suffix = {
 }
 
 materials = [
-    "copper_ingot"
+    "copper_ingot",
+    "iron_ingot",
+    "gold_ingot",
+    "diamond"
 ]
 
 material_names = {
-    "copper_ingot": "Copper"
+    "copper_ingot": "Copper",
+    "iron_ingot": "Iron",
+    "gold_ingot": "Gold",
+    "diamond": "Diamond"
 }
 
 material_types = {
-    "copper_ingot": "copper"
+    "copper_ingot": "copper",
+    "iron_ingot": "iron",
+    "gold_ingot": "golden",
+    "diamond": "diamond"
 }
 
 material_durabilities = {
-    "copper_ingot": 190
+    "copper_ingot": 190,
+    "iron_ingot": 250,
+    "gold_ingot": 32,
+    "diamond": 1561
 }
 
 def crowbar_recipe(material: str, pattern_type: str) -> str:
